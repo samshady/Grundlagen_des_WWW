@@ -1,0 +1,237 @@
+
+Fragen & Lösungen 01 HTML Grundlagen
+Version 30, geändert von Silas Jörn
+am 01.05.2026, 13:29:53
+
+Fragen
+
+
+
+Lösungen (Name, Link zu Ellie-App)
+
+(Leonid Kaurov, https://ellie-app.com/ys38mnmYHK2a1)
+(Malik Sharkawy, https://ellie-app.com/ys3749fHHRra1)
+(Christian Schwarzer, https://ellie-app.com/ys3gn6Yg3J2a1 )
+(Heinrich Fritsch, https://ellie-app.com/ys3gDwzt5hWa1)
+(Jennifer Jäger, Yuliia Hnatovska, https://ellie-app.com/ys3p2CcYBRca1)
+(Alexander Knepper, https://ellie-app.com/ys3v27czgtwa1)
+(Janik Luthe, https://ellie-app.com/ys3J6pVcBDBa1)
+(Nikoloz Iashvili, Benni Lautenbach, https://ellie-app.com/ys3PqsXcG4Fa1)
+(Yousef Gahalla, https://ellie-app.com/ys3C8nSTVGQa1)
+(Konrad Brehmer, https://ellie-app.com/yw8wGrQWPXBa1)
+(Jenna Peters, https://ellie-app.com/ys3cRknTgk6a1)
+(Luke-Felix Brüske, https://ellie-app.com/yswwQ5m4Xqta1)
+(Varvara Zakharchenia, Anna Shykhailova, https://ellie-app.com/ysS9dW2TGc5a1)
+(Yasmin Albrecht-Begenau, https://ellie-app.com/ysYsKB8TjxNa1)
+(Casimir Reiche, Carl Thomas, https://ellie-app.com/ytQLFhff3J3a1)
+(Leonie Engel, https://ellie-app.com/yvBHqtT9yZ8a1)
+(Emma Fuerst, https://ellie-app.com/yvHBV79rsrga1)
+(Kateryna Shapilova, https://ellie-app.com/yvRzMhwDPTwa1)
+(Simon Sieber, Wendelin Beddermann) https://ellie-app.com/yw47tPy69yya1
+(Niklas Kühn, https://ellie-app.com/yw6ryLM4rJma1)
+(Gino Cappuccio, https://ellie-app.com/yw99mJmfDP3a1)
+(Henry Schach, https://ellie-app.com/yw9GcPKNzNha1)
+(Silas Joern, Chiara Winkler, https://ellie-app.com/yDNvsTSzVVJa1)
+
+
+----
+
+
+Fragen & Lösungen 02 HTML
+Version 17, geändert von Henry Schach
+am 30.04.2026, 13:54:28
+
+Fragen
+
+Beispiele für Radio Buttons
+Handgeschrieben
+Gemini mit etwas Elm-Code , vorgegebener Elm-Code
+Gemini nur mit textueller Beschreibung :
+Erstelle  Elm Code, so dass im View in einem  div element mehrere Radio Buttons angezeigt werden. Die Radio Buttons  sollen mit Weizen, Vollkorn und Dinkel beschriftet sein.  Wenn ich einen Radio Button auswähle soll im  Modell das Brot-Element  mit dem entsprechenden Typ gesetzt werden
+die Uni-KI mit Modell HAWKI (GWDG Mistral Large Instruct) kann ebenfalls sehr gut Elm erzeugen: Ergebnis für Prompt ohne Elm-Vorgabe
+
+Lösungen (Name, Link zu Ellie-App)
+
+(Leonid Kaurov, https://ellie-app.com/yw8hjQDV8h2a1)
+(Christian Schwarzer, https://ellie-app.com/yw8QFhQLVcqa1)
+(Casimir Reiche, Carl Thomas, https://ellie-app.com/yzfjffgNSywa1 )
+(Luke-Felix Brüske, https://ellie-app.com/yxTKpVjBg3Ca1)
+(Jennifer Jäger, https://ellie-app.com/yxV6ntzGSS9a1)
+(Yuliia Hnatovska, https://ellie-app.com/yywPRFqmYKxa1)
+(Gino Cappuccio, https://ellie-app.com/yzfJLxB5Tc6a1)
+(Malik Sharkawy, Jenna Peters, https://ellie-app.com/yzfW8tt9gFda1)
+(Konrad Brehmer, https://ellie-app.com/yzh3jVYMpmna1)
+(Emma Fuerst https://ellie-app.com/yzh79HLST7Sa1)
+(Henry Schach https://ellie-app.com/yzgLkNNTy9na1)
+
+-----
+
+
+Fragen & Lösungen 03 CSS
+Version 16, geändert von Malik Sharkawy
+am 21.05.2026, 15:43:46
+
+Fragen
+
+
+
+Lösungen (Name, Link zu Ellie-App)
+
+(Jenny Jäger, Christian Schwarzer, https://ellie-app.com/yzgNyZgXmW8a1)
+(Leonid Kaurov, https://ellie-app.com/yzg4cDfsfcYa1)
+(Janik Luthe, https://ellie-app.com/yzgvjTVLcx3a1)
+(Yuliia Hnatovska https://ellie-app.com/yzgR4Vcgtcra1)
+(Elias Billowie https://ellie-app.com/yzgVTcdh5TVa1)
+(Luke-Felix Brüske, https://ellie-app.com/yCyfGZyCsQXa1)
+(Casimir Reiche, Carl Thomas, https://ellie-app.com/yDn7cCkmtsra1)
+(Konrad Brehmer, https://ellie-app.com/yDnCK6CCCsGa1)
+(Henry Schach, https://ellie-app.com/yDpSJJ5Y8qLa1)
+(Niklas Kühn, https://ellie-app.com/yDpNh6SnjVDa1)
+(Malik Sharkawy,  https://ellie-app.com/yPKHGPHHm4Xa1)
+
+----
+
+
+Fragen & Lösungen 04 SVG
+Version 11, geändert von Luke-Felix Brüske
+am 07.05.2026, 16:11:15
+
+Fragen
+
+
+
+Lösungen (Name, Link zu Ellie-App)
+
+(Elias Billowie, https://ellie-app.com/yDpz4PjCwxVa1)
+(Janik Luthe, https://ellie-app.com/yDpzFky5cSLa1)
+(Luke-Felix Brüske, https://ellie-app.com/yHwNjzLsksja1)
+(Henry Schach, https://ellie-app.com/yHscjxgKvK5a1)
+(Konrad Brehmer, https://ellie-app.com/yHvwFfhVDpca1)
+(Christian Schwarzer, Jennifer Jäger, https://ellie-app.com/yHvrcYRtrxda1)
+
+
+----
+
+
+Fragen & Lösungen 05 HTTP
+Version 4, geändert von Luke-Felix Brüske
+am 25.05.2026, 21:00:13
+
+Fragen
+
+
+
+Lösungen (Name, Link zu Ellie-App)
+
+(Luke-Felix Brüske, https://ellie-app.com/yPKK8ZPPWL5a1)
+(Konrad Brehmer, https://ellie-app.com/yRtRn7j2C9xa1)
+
+
+----
+
+Version 15, geändert von PD Dr. Alexander Hinneburg
+am 28.05.2026, 15:25:25
+
+⚠️ NOTICE: The project ideas listed below are from OTHER STUDENTS. Do NOT copy them — come up with your own original idea!
+
+Tragen sie hier ihre Projekte ein. Beschreiben sie die Projekte mit 3-4 Sätzen. Wenn ihr Projektvorschlag von mir in die Liste der Projekte aufgenommen wurde, tragen Sie bitte später einen Link zum Code (gitlab oder github) und einen Link zu einer lauffähigen Demo-Version ein.
+
+Wir wollen ein Wegfinder für den Heidecampus machen. In dem man einen Raum angibt und man in einer topdown sicht sieh wo man langgehen muss um zu diesem Raum zu gelangen. Je nach Komplexität wäre eine erweiterung eines weiteren Campus möglich. Wir sind eine 3er Gruppe (aqbzp, ampbn, ammdg)
+Klingt gut. Aber sie brauchen Daten und ein Backend. Ich habe mal bei Campusmaps nachgefragt, ob sie Interesse zur Zusammenarbeit haben.
+Wir (akpyh, akkwt) möchten den Needleman-Wunsch-Algorithmus zur globalen Sequenzalignierung in Elm implementieren. Der Benutzer kann zwei biologische Sequenzen (DNA/Protein) eingeben, die Scoring-Parameter anpassen und erhält eine interaktive Visualisierung der dynamischen Programmierungsmatrix sowie des optimalen Alignments.
+Klingt gut. Eine Basis für den Needleman-Wunsch-Algorithmus finden sie im Elm-Paket Levenshtein, dass die Edit-Distanz implementiert.
+Ich (Yuliia Hnatovska) möchte ein kleines 2D-Platformer-Spiel mit Elm entwickeln. Der Spieler steuert eine Figur durch ein paar kleine Levels, sammelt Münzen und muss Gegnern sowie Hindernissen ausweichen oder diese durch Sprünge besiegen. Zusätzlich soll ein einfaches Menü mit Auswahlmöglichkeiten implementiert werden.
+Klingt gut. Sie müssen sich noch überlegen, wie sie das Nachladen von Json-Daten mit HTTP und verschiedene URL-Routen in das Projekt einbauen. HTML, CSS und SVG ist vermutlich einfach einzubauen.
+Ich (Leonid Kaurov) möchte einen Raumkonfigurator bauen. Bei diesem kann der Nutzer in einer Topdown Ansicht verschiedene Möbelstücke, sowie Dekorationen beliebig in  einem Raum platzieren. Es soll ebenfalls möglich sein den Raum nach der Größe anzupassen, sowie allgemeine Darstellung des Raumes zu konfigurieren.
+Emma Fuerst: UniKino-Projekt: Die Seite https://www.unifilm.de/studentenkinos/Halle arbeitet nicht mit JSON-Daten, sondern kodiert alles im HTML:
+….
+<div class="semester-film-row" data-id="5126" data-sid="28615">
+<div class="film-row-text film-row-datum">Mi. 27.05.2026</div>
+<div class="film-row-text film-row-uhrzeit">19:00 Uhr</div>
+<div class="film-row-text film-row-titel">Zoomania 2 </div>
+<div class="film-row-text film-row-info">Diesmal im HS. XXIII - Audimax am Uniplatz</div>
+</div>
+….
+
+Die HTML-Seite kann als String eingelesen werden und mit dem XML-Decoder-Package  ymtszw/elm-xml-decode in Elm-Daten-Typen umgewandelt werden. Dann können diese Daten beliebig dargestellt und mit eigenen Daten angereichert werden.
+Wir (Jenny Jäger, Christian Schwarzer) möchten ein online casino entwickeln.   https://ellie-app.com/ySQFZvZn56ja1 , https://ellie-app.com/ySQTkKJkBZ5a1
+Henry Schach - Freunde von mir schmeißen mehrfach im Jahr einen Cocktailtresen. Um die Mengen zu kalkulieren, müssen sie jedes Mal händisch lange rumrechnen. Ich würde gerne ein Programm bauen, dass folgendes kann :Cocktailrezepte anlegen und bearbeiten, benötigte Zutatenmengen für ein Event kalkulieren, Einkaufslisten erstellen → Verpackungsgrößen berücksichtigen, zum Beispiel wie viele Tonicflaschen benötigt werden. Damit das Programm möglichst einfach genutzt werden kann, soll es ohne Server oder Datenbank auskommen. Dafür würde ich gerne den Localstorage nutzen. Deshalbsoll es eine Möglichkeit geben, Rezepte und Planungen zu exportieren und wieder zu importieren.
+Sie müssten an einer Stelle HTTP Anfragen einbauen. Ebenso ein SVG, dass durch den Zustand des Modells interaktiv beeinflusst wird, also sich durch Interaktion ändert
+Für cocktails gibt es diese API : https://www.thecocktaildb.com/api.php
+Localstoreage kann man in Elm nur über ports und JavaScript nutzen. Aber eigentlich ist das nicht nicht unbedingt nötig. SIe können den Zustand des Programms als JSON-String anzeigen, so dass der Anwender den String speichern kann. Wenn das Programm nochmal gestartet wird, muss der JSON-String importiert werden können.
+
+----
+
+
+Argumente Pro und Contra Elm
+Version 1, geändert von PD Dr. Alexander Hinneburg
+am 23.04.2026, 11:41:14
+
+Elm ist für diese Vorlesung im SoSe 26 für die Projekte Pflicht. Ich möchte jedoch für die kommenden Semester offen für Argumente, um die Entscheidung informiert überdenken zu können. Aus meiner Sicht habe ich die Argumente für und gegen Elm und dessen Alternativen zu sammeln.
+
+Pro Elm
+
+ Domänenspezifische Sprache mit einer Software-Architektur (TEA The Elm Architektur), die für Entwicklung von Web-Applikationen spezifiziert und optimiert ist
+TEA garantiert, dass die Entwicklung eines Projektes nicht zu komplizierten kaum erweiterbaren Code führt
+Der Compiler garantiert keine Laufzeitfehler.
+Deshalb ist die Zusammenarbeit mit Kommilitonen leichter.
+Ebenfalls ist es leichter Code-Stücke, die mit KI generiert sind, in den bestehen Code fehlerfrei zu integrieren.
+Die erstellte Software ist deutlich sicherer und hat keine Schwachstellen.
+Elm ist die Voraussetzung für die Veranstaltung Informationsvisualisierung im Master, die von Inf, Bio-Inf und Wi-Inf besucht wird.
+Elm-Variablen sind unveränderlich und die programmierten Funktionen haben keine Seiteneffekte.
+Funktionen sind deutlich leichter zu verstehen
+Funktionen sind leichter zu testen.
+Alle Variablen sind stark typisiert.
+Alexander Hinneburg (als Verantwortlicher) kann nur zu Elm fundiert Hinweise und Tips geben. Die Bewertung von JS- oder TS-Projekten kann ich nicht umsetzen.
+Contra Elm
+
+Die Sprache um extra gelernt werden, was zu Beginn mehr Zeitaufwand erfordert.
+Funktionale Programmierung wird im Studium nicht prominent in Einführungsvorlesungen gelehrt.
+Die Elm-Community ist kleiner als JS- oder TS-Community
+Pro JavaScript
+
+Manche Studierende bringen aus anderen Vorlesungen (Wi-Inf) Vorkenntnisse mit.
+Die JS-Community ist sehr groß und es gibt für fast alle Anwendungsfragen schon Bibliotheken
+Die Entwicklung von JS-Programmen ist oft etwas schneller, als die Entwicklungen von Elm-Programmen, weil man sich auf die Umsetzungen von Features konzentrieren kann. Randfälle, die zu Abstürzen des Programms führen können, kann man erst mal ignorieren.
+Contra JavaScript
+
+ Fehler im Programm-Code bleiben unentdeckt, bis man die Code ausführt. Auch die erfolgreiche Ausführung des Codes garantiert jedoch nicht Fehlerfreiheit, weil Funktionen Seiteneffekte haben und die Fehlerfreiheit auch vom Kontext belegten globalen Variablen abhängt.
+Programm können komplexe Fehlerstrukturen enthalten, die man selten bemerkt
+Fehlende Typisierung im Code erschwert das Umbauen von Programm-Code, weil man nie sicher ist, ob nicht etwas kaputt gegangen ist.
+Zusätzlich zu JS muss für Web-Applikationen ein Framework wie React, Angular, Vue, … genutzt werden, um eine wartbare Software-Architektur zu erhalten.
+Pro TypeScript
+
+ Manche Studierende bringen Vorkenntnisse mit.
+Konzeptionell ist der OO-Ansatz zugänglicher, weil es besser zum Java-Ansatz passt.
+Die TS-Community ist groß und es gibt für viele Anwendungsfragen schon Bibliotheken
+Optionale Typisierung ermöglicht leichteres Umarbeiten von Code, wenn in allen Code-Teilen auch die Typisierung genutzt wurde.
+Contra TypeScript
+
+ Zusätzlich zu TS muss für Web-Applikationen ein Framework wie React, Angular, Vue, … genutzt werden, um eine wartbare Software-Architektur zu erhalten.
+Typisierung ist nur dann nützlich, wenn die genutzten Bibliotheken in aktuellen Version auch die Typ-Annotationen verfügbar sind
+Optionale Typisierung erschwert das Verstehen und das Testen von Programmcode.
+
+
+----
+
+
+Arbeiten mit Karten über Leaflet
+Version 1, geändert von PD Dr. Alexander Hinneburg
+am 21.05.2026, 11:17:33
+
+Arbeiten mit Leaflet
+Verschiedene Gruppen wollten mit Leaflet.js arbeiten einer JS-Bibliothek, die Karten darstellen kann.
+
+Das folgende Beispiel zeigt wie Elm und Leaflet über Ports zusammenarbeiten können: Code, Demo
+
+Die Ports werden in der Datei public/index.html in den Script-Elementen definiert und in Elm aufgerufen.
+
+
+----
+
+
+Arbeiten mit gitlab und gitlab-pages
+Version 1, geändert von PD Dr. Alexander Hinneburg
+am 21.05.2026, 16:12:49
+
+Sie können im gitlab-lehre ein Projekt anlegen oder forken (git Spech für kopieren).  Ich habe schon das Projekt alexander.hinneburg/www_test mit der üblichen elm App zum Testen angelegt. Die Datei .gitlab-ci.yml ist so konfiguiert, dass nach jedem Commit das elm-Programm neu kompiliert und die erzeugte JS-Datei in das Verzeichnis public gespeichert wird. Sie können das Projekt über die Gitlab Pages anzeigen lassen. Die konkrete Web-Seite erreichen sie über das gitlab menu (linke Seite): Deploy → Pages.

@@ -1,0 +1,927 @@
+Inhalte Vorlesung und Übungen
+Zuletzt geändert von PD Dr. Alexander Hinneburg am 23.04.2026, 11:51:59
+Ablauf der Veranstaltung
+Zu den Grundlagen des WWW gibt es neben den Folien von Prof. Brass schon viele sehr gute Online-Ressourcen. Sie werden in der Veranstaltung lernen interaktive Web-Anwendungen mit der Programmiersprache Elm Version 19.1 zu programmieren. Arbeiten sie den Lesestoff selbstständig durch und notieren sie sich Fragen.Die Liste mit Elm-Tutorials soll ihnen helfen, den für sie passenden Einstieg in die Programmiersprache zu finden.
+
+Vorbereitung und Zeit vor Ort
+Lesen Sie den Stoff zeitnah zu dem Veranstaltungstermin und stellen Sie im Forum Fragen zu den Teilen, die Sie nicht verstehen.
+Wenn Sie beim Durcharbeiten des Lesestoffs weitere gute Materialien finden, können Sie diese auf der Wiki-Seite für ergänzende Materialien eintragen.
+Do. 12:15-13.45 Uhr kurze Wiederholung des Lesestoffs, Beantwortung der Fragen und Vorstellen der Lösungen der Aufgaben vom letzten Mal.
+Do. 14:15-15:45 Uhr praktische Bearbeitung der Aufgaben in Elm im PC-Pool (hier wird vorausgesetzt, dass sie den Lesestoff schon durchgearbeitet haben.)
+Wenn Sie nicht fertig geworden sind, bearbeiten Sie die Aufgaben weiter, allein oder in Zweier-Gruppen. Dreier-Gruppen sind nicht zulässig. Tragen Sie Ihre Lösungen online im Wiki in die vorgesehenen Seiten ein. Die Aufgaben werden nicht bewertet. Sie können sich bei den Lösungen Ihrer Kommilitonen Tipps und Tricks beim Umgang mit Elm anschauen.
+Projekte und Prüfung
+Ab Juni sollen sie ein kleines Projekt anstatt der Aufgaben bearbeiten. Die Projekte sollen am Do. 16. Juli 2026 von 12-16 Uhr vorgestellt werden. Ein erfolgreich ausgearbeitetes und vorgestelltes Projekt ist die Studienleistung. Sie können die Projekte allein oder in Zweier-Gruppen bearbeiten. Dreier-Gruppen sind nicht zulässig.
+Bei der Bearbeitung der Projekte sollen HTML, SVG, CSS, Elm, URL-Navigation und HTTP-Anfragen zum Nachladen von Daten sinnvoll benutzt werden. Es sollen interaktiv benutzbare Web-Applikationen entstehen. Die Projekte, Inhalte und Umfang müssen vorher mit Alexander Hinneburg abgesprochen werden. Update: Die Projekte müssen in allen o.g. wesentlichen Funktionen in Elm umgesetzt werden. JavaScript kann nur genutzt werden, um optionale zusätzliche Funktionen zu implementieren. Für die wesentlichen Funktionen darf JavaScript nicht genutzt werden.
+Der Termin für die mündliche Prüfung wird an einem Termin in den letzen beiden Wochen im August zwischen 9 Uhr und 16 Uhr sein. Die Prüfungen sind mündlich, Dauer etwa 35 min. Prüfungsstoff sind die Vorlesungsfolien von Prof. Brass und praktische Aspekte der Projekte. Bitte melden sie sich rechtzeitig im Löwenportal an. Die genauen Uhrzeiten der Prüfungen wird etwa 1 Woche vorher bekannt geben, wenn die Anmeldungen im Löwenportal feststehen.
+Vorlesungen und Übungen
+09.4.2026 Einführung in HTML und Elm
+16.4.2026 Grundlagen HTML und Elm, Wiki für Lösungen
+23.4.2026 Html und Elm, Wiki für Lösungen
+30.4.2026 CSS und Elm, Wiki für Lösungen
+07.5.2026 SVG und Elm, Wiki für Lösungen
+14.5.2026 Feiertag
+21.5.2026 HTTP, JSON, Datenbanken-Abfragen und Elm, Wiki für Lösungen
+28.5.2026 URLs und Elm, Wiki für Lösungen
+04.6.2026 Domain-Name-System und Projekt
+11.6.2026 Internet und Netzwerke und Projekt
+18.6.2026 SGML, XML und Projekt
+25.6.2026 Elm und parktische Arbeite mit JSON und Projekt
+02.7.2026 Elm und Module und Projekt
+08.7.2026 Elm, Single-Page-Application und JavaScript und Projekt
+16.7.2026 Vorstellung der Projekte
+Prüfung
+
+----
+
+Elm Guides und Tutorials
+Zuletzt geändert von PD Dr. Alexander Hinneburg am 09.04.2026, 12:09:24
+Einstieg in Elm
+
+Guide: An Introduction to Elm
+Learn you an Elm ist die Adaption von Learn You a Haskell for Great Good , ein lustig illustriertes Online-Buch.
+Beginning Elm
+Practical Elm for a Busy Developer
+Elm in Action
+Online Repl zum schnellen Ausprobieren von einzelnen Elm-Anweisungen.
+Ellie ist eine Online-Entwicklungsumgebung für Elm
+Elm-Visualization ist eine Bibliothek mit den wesentlichen Grundfunktionen für Informationsvisualisierung
+Elm-Packgages mit Dokumentation und Beispielen
+Elm Search um Funktionen in den aktuellen Paketen mittels Namen oder Typ-Signatur zu finden
+ElmBridge
+
+Elm-Videos
+
+Jesse Warden, Elm Introduction (Elm 19)
+Elm Tutorial, Tensor Programming (Elm 18)
+Life of a File, Evan Czaplicki
+"Making Impossible States Impossible" by Richard Feldman
+Elm Programming, haraldmaida, Playlist
+Elm Lang Advanced, John Crane, Playlist
+Egg Head: Elm Lessons and Course
+Video Courses and Tutorials to Learn Elm
+Five Free Tutorials on Building Apps in Elm
+Elmseeds
+Practical Elm for a Busy Developer
+Beginning Elm, a gentle introduction to Elm programming language
+
+-----
+
+01 HTML Grundlagen
+Zuletzt geändert von PD Dr. Alexander Hinneburg am 08.04.2026, 17:24:34
+Leseliste
+SGML / HTML Grundlagen
+SGML, Kapitel 4
+Elemente Folien 4-29 bis 4-41
+Attribute Folien 4-52 bis 4-62
+HTML, Kapitel 7
+HTML-Beispiele: Folien 7-26 bis 7-29
+HTML-Aufbau: Folien 7-35 bis 7-59
+selfhtml.org: Minimales Grundgerüst einer HTML5-Webseite
+Inline-Elemente
+Zusammenfassung Folie 7-96
+selfhtml.org: bold
+selfhtml.org: span
+selfhtml.org: button
+selfhtml.org: button, Referenz
+Block-Elemente
+Folien 7-97 bis 7-123
+selfhtml.org: Seitenstrukturierung
+selfhtml.org: Absätze
+selfhtml.org: Listen
+selfhtml.org: div
+Überblick über Repräsentation im Browser und einfache Reaktionen auf Clicks
+DOM/Schnittstelle zwischen HTML, Browser und Javascript
+Reaktionen (am Beispiel eines Clicks)
+selfhtml.org: Ereignisverarbeitung
+selfhtml.org: Onclick
+ELM
+Elm-Homepage
+Introduction
+Core Language (einmal überfliegen und später als Referenz nutzen)
+The Elm Architecture mit Unterkapiteln
+Ellie, der Online-Editor und Compiler
+Installieren von Elm auf dem eigenen Computer mit Unterkapiteln
+Referenz zu Elm und Html
+Elm Standardpakete
+Elm HTML
+Paket-Verwaltung mit Referenz-Dokumentation der Bibliotheken
+Fragen
+Bitte schreiben sie ihre Fragen ins Wiki.
+
+Aufgaben
+Die Aufgaben sollen in dem Ellie-Online Editor bearbeitet und gespeichert werden. Durch das Speichern in Ellie bekommen wird eine eindeutige URL vergeben. Bitte tragen sie diese URL als Lösung unter Ihrem Namen auf dieser [Seite im Wiki(https://studip.uni-halle.de/wiki.php?cid=432ffd46a354a57fdda9cb0a6547fdee&wiki_comments=icon&keyword=WikiWikiWeb)] ein.
+
+Wenn sie in Zweier-Gruppen arbeiten (keine Dreier-Gruppen oder mehr), tragen sie beide Namen unter einem Punkt ein.
+
+Aufgabe 1.1 Darstellen von Adressinformation in deutsch mit Html und Elm
+Stellen sie Adressinformationen dar. Nutzen sie Html und entsprechende Elm-Funktionen, um die Informationen möglichst so darzustellen, wie sie hier angezeigt werden. Erweitern sie das Elm-Beispielprogramm Buttons .
+
+Meine Adresse
+Name: Herr/Frau Mustermann
+Straße und Hausnummer: Von-Seckendorff-Platz 1
+Postleitzahl und Ort: 06120 Halle
+Land: Deutschland
+Telefonnummer: 0345 12345
+email: mustermann@informatik.uni-halle.de
+Web-Seite: http://www.informatik.uni-halle.de
+Aufgabe 1.2 Darstellen von Adressinformation in deutsch und English
+Duplizieren sie ihren Code im View, um die gleiche Adressinformation auf deutsch und darunter auf englisch darzustellen. Übersetzen sie die Bezeichnungen, wie Name, Straße usw.
+
+Aufgabe 1.3 Funktion für Darstellung in verschiedenen Sprachen
+Schreiben sie eine Funktion, die als Parameter Strings mit den Bezeichnungen nimmt und als Ausgabe die entsprechende Html-Darstellung der Adressinformation macht. Rufen sie die Funktion zwei mal im View auf, einmal mit deutschen Bezeichnungen, einmal mit englischen. Das dargestellte Ergebnis ist wie bei Aufgabe 2, aber es gibt keinen verdoppelten Code mehr.
+
+Aufgabe 1.4 Interaktives Umschalten zwischen verschiedenen Sprachen
+Nennen sie die Buttons so um, dass sie zum Umschalten zwischen den Sprachen dienen. Vergeben sie ebenfalls neue Namen für die Typen und Variablen im Code. Als Ergebnis soll die Adresse mit den zwei Umschaltbuttons dargestellt werden. Die dargestellte Sprache entspricht dem gedrückten Button.
+
+Zusatzaufgabe: ein statt zwei Umschalt-Buttons
+Etwas einfacher wird das User-Interface, wenn es nur einen Umschalt-Button gibt, der die Sprache anzeigt, die man bekommt, wenn man den Button drückt. Die Sprache des Buttons wechselt ebenfalls bei jedem Click.
+
+----
+
+02 HTML
+Zuletzt geändert von PD Dr. Alexander Hinneburg am 16.04.2026, 13:08:00
+Leseliste
+Html Aufbau
+Html, Folien 7-31 bis 7-59
+Zeichenkodierung
+Html Head
+Meta-Daten
+Html Elemente
+Links im Body
+Folien 8-4 bis 8-25
+Links
+Links im Head
+Folien 8-26 bis 8-36
+Link-Element
+Images und Image Maps
+Folien 8-38 bis 8-61
+Bilder im WWW
+HTML-Imagemap
+Tabellen
+Folien 8-63 bis 8-102
+Tabellen
+Aufbau
+Spalten und Zellen verbinden
+Beschriftung
+Formulare
+Elm Typen
+Typen
+Type Aliases
+Custom Types
+Making Impossible States Impossible by Richard Feldman youtube
+Basics
+List-Library
+Elm Werkzeuge+
+elm repl
+elm make
+Beispiel zur Verwendung
+elm-package
+Installieren von elm Direktes Installieren ist ohne Root-Rechte die einfachste Möglichkeit
+Fragen
+Bitte schreiben sie ihre Fragen ins Wiki
+
+Aufgaben
+Die Aufgaben sollen in dem Ellie-Online Editor bearbeitet und gespeichert werden. Durch das Speichern in Ellie bekommen wird eine eindeutige URL vergeben. Bitte tragen sie diese URL als Lösung unter Ihrem Namen weiter unten auf dieser Seite ein.
+
+Wenn sie in Zweier-Gruppen arbeiten (keine Dreier-Gruppen oder mehr), tragen sie beide Namen unter einem Punkt ein und löschen den anderen Namen.
+
+Aufgabe 2.1 Darstellen eines Bildes mit clickbarem Inhalt mit Elm
+Stellen sie das folgende Bild dar. Legen Sie auf das Bild eine Map (siehe HTML-Imagemap )mit einem rechteckigen Area, um bestimmte Regionen auf dem Bild clickbar zu machen. Die Koordinaten der Gebiete sollen in einem Elm-Record gespeichert werden, der Teil des Modells in Elm ist.
+
+Suchbild alt Suchbild
+
+Aufgabe 2.2 Darstellen der clickbaren Gebiete
+Stellen sie die Beschreibungen der clickbaren Gebiete unter dem Bild als Tabelle dar:
+
+| Laufende Nummer | Gebietstyp | Gebietskoordinaten | | 1 | Rechteck | x1=100, y1=100, x2=150, y2=150 |
+
+Rechtecke und Kreise haben eine feste Anzahl von Koordinaten. Polygone haben eine Liste von 2D-Koordinaten als Parameter, d.h. hier soll eine Liste innerhalb der Tabelle benutzt werden. Wenn im Bild in das Gebiet geclickt wird, soll der Browser an die entsprechende Stelle in der Tabelle springen.
+
+So soll es nach Aufgabe 2.2 aussehen: Ergebnis 2.2
+
+Hier ist eine Code-Vorlage: (in Ellie)
+
+module Main exposing (main)
+
+import Browser
+import Html exposing (Html, Attribute, div, fieldset, input, label, text,img,
+  node, button, table, tr, td, th, a)
+import Html.Attributes exposing (name, style, href, type_, src, usemap, shape, coords, title, id, checked)
+import Html.Events exposing (onClick, onInput)
+import List exposing (map, append, map2, range, length)
+
+
+main =
+    Browser.sandbox
+        { init = {input=(Circle "0" "0" "0"), saved=[]}
+        , view = view
+        , update = update
+        }
+
+-- MODEL
+type alias Model =
+  { input : Shape
+  , saved : List (Shape)
+  }
+
+type Shape
+  = Circle String String String
+--  | Rectangle String String String String
+--  | Polygon (List ( ( String, String ) ))
+
+type Msg
+  = Change Shape
+--  | Add Shape
+
+
+-- UPDATE
+update : Msg -> Model -> Model
+update msg model =
+  case msg of
+    Change newShape ->
+      { model | input = newShape}
+--    Add newShape ->
+--      { model | saved = newShape :: model.saved}
+
+-- VIEW
+view : Model -> Html Msg
+view model =
+  div []
+    [
+-- add img to http://www.informatik.uni-halle.de/im/1285058520_1381_00_800.jpg
+-- add imgMap with areas, the functions for the tags are defined below
+-- use map function of the List package to generate the areas tags for the list entries
+-- add radio buttons to select shape, see example http://elm-lang.org/examples/radio-buttons
+-- add input fields for shape parameters and a button to add the shape to the list
+-- add a table to show the list of the shapes
+-- use map function of the List package to generate the table rows for the list entries
+-- use map2 to pass a section list with index numbers
+    ]
+
+imgMap : List (Attribute msg) -> List (Html msg) -> Html msg
+imgMap attributes children =
+    node "map" attributes children
+
+area : List (Attribute msg) -> List (Html msg) -> Html msg
+area attributes children =
+    node "area" attributes children
+Aufgabe 2.3 Interaktives Ergänzen von clickbaren Gebieten
+Fügen sie am Ende der Tabelle ein Formular ein, mit dem man ein neues Gebiet hinzufügen kann. Bereiten Sie entsprechende Eingabemasken für alle drei Gebietstypen vor. Ergänzen sie die Tabelle um eine weitere Spalte, in die sie Buttons zum Löschen bzw. Hinzufügen von Gebieten platzieren.
+
+Zusatzaufgabe: Einstellen des Viewports für Mobilgeräte
+Ergänzen sie die Html-Datei um die Viewport-Einstellung für Mobilgeräte, damit auf einem Smartphone die Applikation gleich hinreichend groß dargestellt wird.
+
+----
+
+03 CSS
+Zuletzt geändert von PD Dr. Alexander Hinneburg am 08.04.2026, 17:46:48
+Leseliste
+CSS
+Folien 9-1 bis 9-79
+[Motivation]https://wiki.selfhtml.org/wiki/CSS/Tutorials/Einstieg/Warum_Layouts_mit_CSS%3F
+Einbindung in HTML
+Syntax
+Stylesheets einbinden
+Element-Selektoren
+Selektoren
+Namensraum
+Darstellung Eigenschaften
+Schrift
+Positionierung
+Anzeige
+Box-Modell
+Flexbox
+Animation
+Reine CSS-Design-Frameworks (ohne Javascript)
+Bulma , Dokumentation lesen, diesen Framework werden wir in der Vorlesung nutzen
+Pure.css
+surface
+Spectre.css
+Reine CSS-Animation-Bibliotheken (ohne Javascript)
+Animate.css
+Wenn die Animationen nicht funktionieren, kann es daran liegen, dass sie unter Windows oder Apple OS aus Performance Gründen Animationen ausgeschaltet haben.
+Magic Animations
+CSShake
+Hover.css
+Tutorials:
+http://www.css3-tutorial.net/
+http://de.html.net/tutorials/css/
+https://www.w3schools.com/css/
+http://en.wikibooks.org/wiki/Cascading_Style_Sheets
+http://www.css4you.de/
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS
+https://tympanus.net/codrops/2013/11/07/css-overlay-techniques/
+Aufgaben
+Die Aufgaben sollen in dem Ellie-Online Editor bearbeitet und gespeichert werden. Durch das Speichern in Ellie bekommen wird eine eindeutige URL vergeben. Bitte tragen sie diese URL als Lösung unter Ihrem Namen weiter unten auf dieser Seite ein.
+
+Wenn sie in Zweier-Gruppen arbeiten (keine Dreier-Gruppen oder mehr), tragen sie beide Namen unter einem Punkt ein und löschen den anderen Namen.
+
+Für diese Aufgaben können Sie Ihr Elm-Programm vom letzten Mal oder eines von ihren Kommilitonen umbauen und erweitern. Alternativ arbeiten Sie mit der Code-Vorlage auf dieser Seite. In den Aufgaben sollen Sie die Darstellung und Dialoge mit den CSS-Klassen aus Bulma stylen. Wenn alles fertig ist, soll es in etwa so aussehen: Ergebnis
+
+module Main exposing (main)
+
+import Browser
+import Html exposing (Attribute, Html, a, button, div, fieldset, footer, h1, h2, header, img, input, label, li, nav, node, p, section, span, table, tbody, td, text, th, thead, tr, ul)
+import Html.Attributes exposing (checked, class, coords, href, id, name, placeholder, shape, src, style, title, type_, usemap, value)
+import Html.Events exposing (onClick, onInput)
+import List
+import String
+
+
+main : Program () { modal : Maybe ModalState, saved : List Shape } Msg
+main =
+    Browser.sandbox
+        { init = { modal = Nothing, saved = [] }
+        , view = view
+        , update = update
+        }
+
+
+type alias Model =
+    { modal : Maybe ModalState
+    , saved : List Shape
+    }
+
+
+type Shape
+    = Circle String String String
+
+
+
+--  | Rectangle String String String String
+--  | Polygon (List ( ( String, String ) ))
+
+
+type ModalState
+    = ShowTable
+    | InputShape Shape
+    | ShowShape Int Shape
+
+
+type ModalMsg
+    = OpenShowTable
+    | OpenInputShape
+    | Change Shape
+    | Add Shape
+    | OpenShapeMessage Int Shape
+
+
+type Msg
+    = OpenModal ModalMsg
+    | CloseModal
+
+
+update : Msg -> Model -> Model
+update msg model =
+    case msg of
+        OpenModal modalMsg ->
+            updateModal modalMsg model
+
+        CloseModal ->
+            { model | modal = Nothing }
+
+
+updateModal : ModalMsg -> Model -> Model
+updateModal modalMsg model =
+    case modalMsg of
+        OpenShowTable ->
+            { model | modal = Just ShowTable }
+
+        OpenInputShape ->
+            { model | modal = Just (InputShape (Circle "" "" "")) }
+
+        Change shape ->
+            { model | modal = Just (InputShape shape) }
+
+        Add shape ->
+            { model | modal = Nothing, saved = shape :: model.saved }
+
+        OpenShapeMessage i s ->
+            { model | modal = Just (ShowShape i s) }
+
+
+view : Model -> Html Msg
+view model =
+    div []
+        [ applicationHeader
+        , buttons
+        , clickableImage model.saved
+        , viewModal model
+        ]
+
+
+applicationTitle : String.String
+applicationTitle =
+    "Formen über der Informatik"
+
+
+applicationSubTitle : String.String
+applicationSubTitle =
+    "Eingeben, Anzeigen, Finden und Clicken"
+
+
+applicationHeader : Html Msg
+applicationHeader =
+    div []
+        [ h1 [] [ text applicationTitle ]
+        , h2 [] [ text applicationSubTitle ]
+        ]
+
+
+buttons : Html Msg
+buttons =
+    div []
+        [ a [ onClick (OpenModal OpenInputShape) ] [ text "Neue Form" ]
+        , a [ onClick (OpenModal OpenShowTable) ] [ text "Tabelle mit Formen" ]
+        ]
+
+
+clickableImage : List Shape -> Html Msg
+clickableImage shapeList =
+    div []
+        [ img
+            [ src "http://www.informatik.uni-halle.de/im/1285058520_1381_00_800.jpg"
+            , usemap "#informatik"
+            ]
+            []
+        , imgMap [ name "informatik" ]
+            (shapes2areas shapeList)
+        ]
+
+
+shapes2areas : List Shape -> List (Html Msg)
+shapes2areas shapes =
+    List.indexedMap
+        (\i s ->
+            let
+                ( gebietstyp, gebietskoordinaten ) =
+                    case s of
+                        Circle x y r ->
+                            ( "circ", x ++ "," ++ y ++ "," ++ r )
+            in
+            area
+                [ shape gebietstyp
+                , coords gebietskoordinaten
+                , href ("#s" ++ String.fromInt i)
+                , onClick (OpenModal (OpenShapeMessage i s))
+                , title ("Shape " ++ String.fromInt i)
+                ]
+                []
+        )
+        shapes
+
+
+shapes2rows : List Shape -> List (Html Msg)
+shapes2rows shapes =
+    List.indexedMap
+        (\i s ->
+            let
+                ( gebietstyp, gebietskoordinaten ) =
+                    case s of
+                        Circle x y r ->
+                            ( "Kreis", x ++ "," ++ y ++ "," ++ r )
+            in
+            tr [ id ("s" ++ String.fromInt i) ]
+                [ td [] [ text (String.fromInt i) ]
+                , td [] [ text gebietstyp ]
+                , td [] [ text gebietskoordinaten ]
+                ]
+        )
+        shapes
+
+
+viewModal : Model -> Html Msg
+viewModal model =
+    case model.modal of
+        Nothing ->
+            span [] []
+
+        Just modalState ->
+            div []
+                [ case modalState of
+                    ShowTable ->
+                        showShapesAsTableInModal model.saved
+
+                    InputShape shape ->
+                        inputShapeInModal shape
+
+                    ShowShape i s ->
+                        showShape i s
+                ]
+
+
+modalHeader : String -> Html Msg
+modalHeader title =
+    a [ onClick CloseModal ] []
+
+
+modalFooter : List (Html Msg) -> Html Msg
+modalFooter modalButtons =
+    div []
+        (modalButtons
+            ++ [ a [ onClick CloseModal ] [ text "Schliessen" ] ]
+        )
+
+
+showShapesAsTableInModal : List Shape -> Html Msg
+showShapesAsTableInModal shapes =
+    div []
+        [ modalHeader "Tabelle der Formen"
+        , table []
+            [ thead []
+                [ tr []
+                    [ th [] [ text "Laufende Nummer" ]
+                    , th [] [ text "Gebietstyp" ]
+                    , th [] [ text "Gebietskoordinaten" ]
+                    ]
+                ]
+            , tbody [] (shapes2rows shapes)
+            ]
+        , modalFooter []
+        ]
+
+
+inputShapeInModal : Shape -> Html Msg
+inputShapeInModal s =
+    div []
+        [ inputShape s
+        , modalFooter
+            [ a [ onClick (OpenModal (Add s)) ] [ text "Form hinzufügen" ] ]
+        ]
+
+
+inputShape : Shape -> Html Msg
+inputShape s =
+    case s of
+        Circle x y r ->
+            let
+                changeCircleX newX =
+                    OpenModal (Change (Circle newX y r))
+
+                changeCircleY newY =
+                    OpenModal (Change (Circle x newY r))
+
+                changeCircleR newR =
+                    OpenModal (Change (Circle x y newR))
+            in
+            fieldset []
+                [ div []
+                    [ text "X-Position"
+                    , input [ class "input", type_ "text", value x, onInput changeCircleX ] []
+                    ]
+                , div []
+                    [ text "Y-Position"
+                    , input [ class "input", type_ "text", value y, onInput changeCircleY ] []
+                    ]
+                , div []
+                    [ text "Radius"
+                    , input [ class "input", type_ "text", value r, onInput changeCircleR ] []
+                    ]
+                ]
+
+
+showShape : Int -> Shape -> Html Msg
+showShape i s =
+    div []
+        [ modalHeader ("Shape " ++ String.fromInt i)
+        , text ("Shape " ++ String.fromInt i ++ " wurde gefunden!")
+        , modalFooter []
+        ]
+
+
+imgMap : List (Attribute msg) -> List (Html msg) -> Html msg
+imgMap attributes children =
+    node "map" attributes children
+
+
+area : List (Attribute msg) -> List (Html msg) -> Html msg
+area attributes children =
+    node "area" attributes children
+
+
+ariaLabel : String -> Attribute msg
+ariaLabel value =
+    Html.Attributes.attribute "aria-label" value
+Aufgabe 3.1 Darstellen eines Bildes mit interaktive Regionen mit CSS und Elm
+Ergänzen Sie Ihr Elm-Programm vom letzten Mal um Buttons oder Links mit denen jeweils die Eingabefelder, die Anzeige der Tabelle mit den Formen bzw. die Click-Meldungen für die Formen in der Grafik ein- und ausgeblendet werden. Dies soll als Vorbereitung dienen, die Eingaben, Anzeigen und Meldungen in separate Overlay-Elemente zu verlagern, die nur bei Bedarf angezeigt werden.
+
+Überarbeiten Sie Ihr Elm-Programm vom letzten Mal, so dass das Modell keine Zustände ohne Sinn repräsentieren kann. Alternativ können Ihren Code mit der Code-Vorlage auf dieser Seite vergleichen und die Unterschiede zwischen dem Modell Ihres Programm und dem Modell der Code-Vorlage beschreiben.
+
+Aufgabe 3.2 Stylen mit CSS
+Nutzen Sie die Bulma Klassen, um die Seite - mit einem Kopf- und Hauptteil zu versehen - alle Eingaben, Anzeigen und Meldungen in separate Overlay-Elemente -- sogenanntes Modals -- zu verlagern - alle Links als Buttons dargestellt werden - alle dargestellten Elemente dem Bulma-Style konsistent folgen
+
+Bulma kann im Html-Teil im Head mit folgendem Code eingebunden werden
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+Aufgabe 3.3: Animation mit CSS und Elm
+Animieren Sie die Darstellung der Meldungen, wenn eine Region angeclickt wird. Nutzen Sie dafür die Möglichkeiten der CSS-Klassen von Animate.css .
+
+Aufgabe 3.4: und Rechtecke und Polygone
+Ergänzen Sie das Programm um die Eingabe und Anzeige von Rechtecken und Polygonen.
+
+
+----
+04 SVG
+Zuletzt geändert von PD Dr. Alexander Hinneburg am 07.05.2026, 14:57:20
+Übersicht
+Lesestoff
+Aufgaben
+Bitte lesen sie als Vorbereitung auf die Veranstaltung die Quellen als Vorbereitung und stellen sie Fragen.
+
+SVG
+http://www.w3.org/Consortium/Offices/Presentations/SVG/
+https://www.w3.org/TR/SVG/single-page.html
+https://www.w3schools.com/graphics/svg_intro.asp
+https://wiki.selfhtml.org/wiki/SVG
+Einstieg
+Elemente
+Bilder
+Responsive Bilder
+Farben
+Filter
+[Clipping][https://wiki.selfhtml.org/wiki/SVG/clipPath]
+Masken
+Transformationen
+Koordinatensysteme
+SVG und CSS
+Datenvisualisierung
+https://www.selfsvg.info/
+https://css-tricks.com/how-to-make-charts-with-svg/
+https://rvlasveld.github.io/blog/2013/07/02/creating-interactive-graphs-with-svg-part-1/
+Elm und SVG
+Elm SVG
+Elm Typed SVG besser
+Aufgaben
+Die Aufgaben sollen in dem Ellie-Online Editor bearbeitet und gespeichert werden. Durch das Speichern in Ellie bekommen wird eine eindeutige URL vergeben. Bitte tragen sie diese URL als Lösung unter Ihrem Namen weiter unten auf dieser Seite ein.
+
+Wenn sie in Zweier-Gruppen arbeiten (keine Dreier-Gruppen oder mehr), tragen sie beide Namen unter einem Punkt ein und löschen den anderen Namen.
+
+Für diese Aufgaben soll das Elm-Programm vom letzten Mal so erweitert werden, dass Kreise und Rechtecke sichtbar sind und interaktiv per Maus gezeichnet werden können. Entweder erweitern sie ihr eigenes Programm oder sie suchen sich eines von ihren Kommilitonen aus. Wenn alles fertig ist, soll es in etwa so aussehen: Ergebnis
+
+Die Aufgaben gliedern die Erweiterung in vier Schritte: 1. Button für das interaktive Zeichnen von Formen mit Dropdown-Menue 2. Das responsive Darstellen des Bildes und der Formen als SVG-Grafik 3. Das interaktive Eingeben von Kreisen und Rechtecken 4. Refactoring
+
+Aufgabe 4.1 Button für das interaktive Zeichnen von Formen mit Dropdown-Menue
+Bevor es an das interaktive Zeichnen geht, soll ein Button mit Dropdown-Menue erstellt werden. Verwenden Sie den entsprechenden Dropdown-Button von Bulma. In dem Dropdown-Menu sollen Kreis und Rechteck als Formen auswählbar sein. Wenn eine Form ausgewählt ist, dann sollen die nächsten Mouse-Clicks anderes interpretiert werden: (a) für Kreis soll mit dem ersten Klick der Mittelpunkt und mit dem zweiten Klick der Radius festgelegt werden, (b) für Rechtecke soll der erste Klick eine Ecke und der zweite Klick die Ausdehnung mit Breite und Höhe festlegen. Nach der Auswahl soll das Dropdown-Menue dann wieder ausgeblendet werden und der Button selbst soll "Kreis zeichnen: abbrechen" bzw. "Rechteck zeichnen: abbrechen" heißen und diese Aktion bewirken.
+
+Um zwischen den verschiedenen Zwischenzuständen zu wechseln, kann der Msg-Type erweitert werden
+
+type Msg
+   = OpenModal ModalMsg
+   | CloseModal
+   | AddShapeButton AddShapeButtonMsg
+
+type AddShapeButtonMsg
+    = HideAddShapeDropdownMenu
+    | ShowAddShapeDropdownMenu
+    | MouseDraw Ishape
+    | MouseClick Ishape
+
+type Ishape
+    = Icircle String String (Maybe String)
+    | Irectangle String String (Maybe ( String, String ))
+[/code]
+
+Die verschieden Zustände können durch Erweiterung des Models um ein Feld addShapeButton vom Type AddShapeButtonState umgesetzt werden:
+[code]
+type alias Model =
+    { modal : Maybe ModalState
+    , saved : List Shape
+    , addShapeButton : AddShapeButtonState
+    }
+
+type AddShapeButtonState
+    = ShowButtonMenu
+    | HideButtonMenu
+    | DrawShape Ishape
+Erweitern Sie die update-Funktion analog zu updateModal um eine updateAddShapeButton-Funktion, die sich um die Auswertung der AddShapeButtonMsg kümmert.
+
+Mit dem Dropdown-Button von Bulma müssen mehre Mouse-Click-Ereignisse verbunden werden: (a) äußerer Button zum Anzeigen und Verstecken des Menüs und (b) die inneren Menü-Punkte. Die entsprechenden DOM-Elemente sind in einer Vorfahren-Nachfahren-Beziehung. Lesen Sie über den Fluss von Ereignissen im DOM in Selfhtml nach. Ereignisse wie Clicks werden ebenfalls bei den Vorfahren des eigentlichen Elements ausgelöst. Dies ist hier hinderlich, weil Klicks im Menü ebenfalls einen Klick auf den Button auslösen und so beide Aktionen ausgeführt werden. Um das Aufsteigen des Ereignisses im DOM-Baum zu verhindern, muss in Elm die neue Eventhandler-Funktion onClickNoBubblingUp definiert werden und anstelle von onClick verwendet werden.
+
+onClickNoBubblingUp : msg -> Attribute msg
+onClickNoBubblingUp msg =
+    Html.Events.stopPropagationOn "click" (Json.Decode.map (\m -> ( m, True )) (Json.Decode.succeed msg))
+In diesem Code-Schnipsel wird noch die Bibliothek elm/json verwendet, die Sie in ellie unter packages einbinden müssen oder wenn Sie direkt mit elm entwickeln durch das Installieren des Packages elm/json
+
+elm install elm/json
+Die Bibliothek muss dann am Anfang des Elm-Codes eingebunden werden:
+
+import Json.Decode
+Als Ergebnis dieser Aufgabe haben Sie einen funktionieren Dropdown-Menu-Button. Die Auswahl von Kreis oder Rechteck im Menü braucht noch nicht das interaktive Zeichnen auslösen, sollte aber das Menü wieder schließen.
+
+Aufgabe 4.2 Das responsive Darstellen des Bildes und der Formen als SVG-Grafik
+Bisher wurden die Regionen mittels veralteter HTML-Elemente dargestellt. In dieser Aufgabe sollen sie innerhalb eines SVG-Elements das Informatik-Bild einbinden und die bisher eingegeben Formen als SVG-Elemente durchsichtig anzeigen und anklickbar machen. Ein Klick auf eine Form soll wie bisher auch ein Modal mit einer Nachricht öffnen.
+
+Bulma stellt mit [figure einen Container für responsive Bilder]https://bulma.io/documentation/elements/image/ bereit, in den sie ein SVG-Element einbinden können. Damit sich das SVG-Bild responsive an Breite des Bildschirms anpasst, darf nur die Breite mit 100% angegeben werden. Das Bild ist etwa 800x600. Die viewbox definiert das interne Koordinatensystem innerhalb des SVG.Bildes.
+
+<section class="section">
+  <div class="container">
+     <figure class="image">
+        <svg width="100%" viewBox="0 0 800 600" version="1.1">
+          <image width="800" height="600" title="Informatikgebäude" xlink:href="http://www.informatik.uni-halle.de/im/1285058520_1381_00_800.jpg"></image>
+        </svg>
+     </figure>
+  </div>
+</section>
+Die SVG-Elemente für Kreise und Rechtecke sollen mit der Klasse shape gestylt werden. Die Pseudo-Klasse hover wird automatisch vom Browser entsprechend der Mausposition vergeben:
+
+.shape { fill: black;
+         stroke: red;
+         stroke-width: 3;
+         fill-opacity:0;
+      }
+.shape:hover {
+        fill: white;
+        opacity:0.5;
+        fill-opacity:0.5;
+}
+Achten Sie bei der Klassenzuweisen von SVG-Elementen darauf, dass Sie die Funktion SVG.Attributes.class nutzen und nicht die Funktion HTML.Attributes.class. Das passiert, wenn Sie HTML.Attributes.class mit expose in den Scope aufnehmen und führt zu einer Exception.
+
+Die Elemente für Kreise und Rechtecke (siehe https://wiki.selfhtml.org/wiki/SVG/Elemente für Kreise und Rechteck in SVG) müssen im DOM nach dem Bild als Kinder innerhalb des SVG-Elements eingefügt werden. Dafür können Sie Funktion für das Erzeugen der Area-Elemente umarbeiten.
+
+Als Ergebnis sollen alle bisher eingegebenen Formen durchsichtig mit rotem Rand über dem Bild des Informatikgebäudes dargestellt werden und anklickbar sein.
+
+Aufgabe 4.3. Das interaktive Eingeben von Kreisen und Rechtecken
+Um Kreise und Rechtecke interaktiv eingeben zu können, müssen Maus-Positionen in interpretierbaren Koordinaten abgefragt. Das MouseEvent-Interface des Browser stellt die Eigenschaften offsetX und offsetY bzw. clientX und clientY bereit, die den Pixel-Abstand des Mauszeiger in der jeweiligen Koordinate zur Padding-Kante der Zielknotens im DOM bereitstellen. Diese Koordinaten müssen noch in die Koordinaten des SVG-Koordinatensystems umgerechnet werden. Die in diesem Ellie definierten Hilfsfunktionen stellen eine Lösung bereit, die in allen Browser funktioniert, siehe https://ellie-app.com/yHvCdR3CTkGa1 .
+
+Um den Pixel-Abstand zu sinnvollen Koordinaten zu machen, muss der Zielknoten genauso groß wie die Viewbox SVG-Elements selbst sein, also 800x600 Pixel. Weiterhin muss der Zielknoten der oberste sichtbare Element innerhalb des SVG-Elements sein. Ein Ansatz wäre, ein durchsichtiges Rechteck als letztes Kind des SVG-Elements einzufügen, wenn interaktiv eine Form eingegeben werden soll.
+
+<rect width="800" height="600" x="0" y="0" style="fill:blue;stroke:pink;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9"></rect>
+Unter diesem durchsichtigen Rechteck, d.h. an Positionen vor dem Rechteck in der Kind-Liste des SVG-Elements, können die bisher eingegebenen Formen und die aktuell einzugebende Form dargestellt werden.
+
+Als Ergebnis dieser Aufgabe können Kreise und Rechtecke interaktiv eingegeben werden.
+
+Aufgabe 4.4 Refactoring
+Gehen sie ihren Code durch und prüfen sie, ob und wo sich redundante Code-Teile zu allgemeineren Funktionen zusammenfassen lassen.
+
+----
+
+05 HTTP
+Zuletzt geändert von PD Dr. Alexander Hinneburg am 21.05.2026, 14:49:14
+Übersicht
+Lesestoff als Vorbereitung
+Bitte lesen sie als Vorbereitung auf die Veranstaltung die Quellen als Vorbereitung und stellen sie Fragen.
+
+HTTP Anfragen
+Folien 10-3 bis 10-62
+Resourcen zu HTTP
+HTTP-Anfrage-Methoden
+HTTP-Anfrage-Header
+HTTP-Anfrage-Statuscodes
+MIME-Typen
+HTTP Server Anwendungen
+A Simple Web Server
+Apache HTTP Server Project , Wikipedia
+nginx
+Tomcat
+Python HTTP Server
+++Elm und HTTP++ - Benutzung von HTTP-Anfragen - HTTP-Package - JSON Decoder
+
+Aufgaben
+Die Aufgaben können in dem Ellie-Online Editor bearbeitet und gespeichert werden. Durch das Speichern in Ellie bekommen wird eine eindeutige URL vergeben. Bitte tragen sie diese URL als Lösung unter Ihrem Namen weiter unten auf dieser Seite ein.
+
+Wenn sie in Zweier-Gruppen arbeiten (keine Dreier-Gruppen oder mehr), tragen sie beide Namen unter einem Punkt ein und löschen den anderen Namen.
+
+Für diese Aufgaben soll das Elm-Programm vom letzten Mal erweitert werden, so dass Shapes aus einer Json-Datei per HTTP-Anfrage nachgeladen werden können. Entweder nutzen sie ihr eigenes Programm oder sich suchen sich eines von ihren Kommilitonen aus. Es gibt zwei Versionen, wie die Shapes in einer Json-Datei modelliert sind:
+
+shapes-list-circ-rect.json , nur mit Kreisen shapes-list-circ.json oder mit Kreisen, Rechtecken und Polygonen shapes-list-circ-rect-poly.json
+shapes-circ-rect.json , nur mit Kreisen [shapes-circ.json]h(ttp://users.informatik.uni-halle.de/~hinnebur/shapes-circ.json) oder mit Kreisen, Rechtecken und Polygonen shapes-circ-rect-ploy.json
+Beide Versionen können von diesem Demo eingelesen werden. Sie können die Anfragen im Browser nachverfolgen: wählen sie Untersuchen von Elementen und dann den Reiter Netzwerk.
+
+Beim Entwickeln ist es günstig elm reactor oder python -m http.server 8000 in diesem Verzeichnis zu starten und mit http://localhost:8000/index.html auf das compilierte Programm zuzugreifen. Bei Anpassen der Json-Dateien, muss man oft diese in einem zweiten Tab neu laden, sonst ist im Cache des Browsers eine alte Version.
+
+Aufgabe 5.1 HTTP-Anfrage
+Unter der URL http://users.informatik.uni-halle.de/~hinnebur/shapes-list-circ-rect.json sind die Daten für Shapes verfügbar. Schreiben sie eine Anfrage in HTTP 1.1, die sie mit dem Commando-Zeilenprogramm telnet abschicken. Speichern sie als Antwort die Anfrage und die Antwort des Servers und stellen sie beides auf ihre Lösungsseite im Wiki. Alle technischen Details stehen auf den Folien 10-4 bis 10-19.
+
+Als Antwort bekommen sie eine Meldung 301, die anzeigt, dass die Seite permanent nach https … verschoben wurde. Sie können die Daten nicht mit telnet über die verschlüsselte Verbindung bekommen. Sie müssen stattdessen das Programm openssl verwenden:
+
+openssl s_client users.informatik.uni-halle.de:443
+Nach dem das Zertifikat durchgescrollt ist, können sie die HTTP-Anfrage stellen und bekommen dann auch den Inhalte der Json-Datei als Antwort.
+
+
+
+Aufgabe 5.2 Elm Programm mit Commands und Subscriptions
+Erweitern sie ihr Elm-Programm, so dass main nicht durch Browser.sandbox sondern durch Browser.element definiert wird. Die Beschreibung finden sie im Elm-Guide im Kapitel Commands and Subscriptions . Die weiteren Kapitel HTTP und JSON erklären, wie das Package elm/http benutzt werden kann, um Daten nachzuladen. Sie brauchen für die Aufgaben in der Serie 5 keine Subscriptions. Deshalb können sie die Standard-Subscriptions aus dem HTTP-Beispiel kopieren. Ebenso können Sie die init-Funktion aus dem Beispiel kopieren und das ausgegebene Tupel anpassen: ({ hier ist das bisherige initiale Model}, Cmd.none) . Weil das Main mit Browser.element eine Update-Funktion verlangt, die statt Model ein Tupel aus (Model, Cmd Msg) verlangt, müssen Sie Ihr altes Programm so erweitern, dass solche Tupel ausgegeben werden. Wenn Sie kein Command machen wollen, können Sie an die Stelle im Ausgabetupel Cmd.none verwenden.
+
+Wenn Sie lokal programmieren, dann können sie die Datei mit einer relativen URL /shapes-list-circ-rect.json anfragen. Wenn Sie Netz-Zugang haben, dann können Sie auch http://users.informatik.uni-halle.de/~hinnebur/shapes-list-circ-rect.json verwenden. Wenn Sie allerdings mit Elli programmieren, dann müssen sie die URL https://cors-anywhere.herokuapp.com/https://users.informatik.uni-halle.de/~hinnebur/shapes-list-circ-rect.json nutzen. Das Prefix https://cors-anywhere.herokuapp.com/ fragt den Proxy cors-anywhere.herokuapp.com an, der Cross-Domain-Anfragen erlaubt. Dies ist notwendig, weil die Datei shapes-list-circ-rect.json nicht lokal auf ellie-app.com liegt. Deshalb gehen dort keine relativen URLs. Eine absolute URL https://users.informatik.uni-halle.de/ geht auch nicht, weil users.informatik.uni-halle.de keine Cross-Domain-Anfragen zulässt. Somit bleibt für ellie-app.com nur die Möglichkeit über den Proxy. Dies ist eine Konfiguration, die nur zum Entwickeln genutzt werden soll. Für den Produktionsbetrieb muss man eine andere Lösung finden.
+
+Programmieren sie eine HTTP-Get-Anfrage an die URL http://users.informatik.uni-halle.de/~hinnebur/shapes-list-circ-rect.json in ihr Programm, die als Reaktion auf das Drücken eines Knopfes ausgelöst wird. Das Ergebnis der GET-Anfrage soll in dem String showString abgespeichert werden, der ein neuer Teil der Model werden soll.
+
+Orientieren sie sich an dem Beispiel in dem Kapitel HTTP . Wenn es erfolgreich ist, können Sie im Debugger, die Belegung des Strings showString sehen.
+
+Aufgabe 5.3 Elm Programm mit HTTP-Anfrage und JSON Decoder
+Erweitern sie ihr Programm aus Aufgabe 2 um einen JSON-Decoder, der den Inhalt des Strings in eine Elm-Liste mit Shapes übersetzt. Lesen sie dafür den Abschnitt im Elm Guide im Kapitel JSON das Anfragen von Json-Dateien und das Verwenden von JSON-Decodern nach. Um JSON-Decoder verwenden zu können, müssen sie das Package elm/json installieren. Der Decoder für die Datei shapes-list-circ-rect.json ist einfacher als der für die Datei shapes-circ-rect.json , weil für die letztere Datei erst das Feld shape ausgewertet werden muss und dann in Abhängigkeit von dem Wert circle oder rect der Rest jeweils anders behandelt werden muss. Dies kann man mit der Funktion Json.Decode.andThen umgesetzt werden. Wenn die Datei eingelesen ist, soll die Shape-Liste als Shapes angezeigt werden.
+
+-----
+
+06 URL
+Zuletzt geändert von PD Dr. Alexander Hinneburg am 28.05.2026, 12:17:39
+Übersicht
+Lesestoff als Vorbereitung
+Projektbearbeitung
+HTTP Anfragen, Content, Passwords, Proxies, Cookies
+Folien 10-62 bis 10-145 als Hintergrundwissen zu HTTP für die Prüfung
+++URL, Syntax, Schemas, Fragments++ - Folien 3-12 bis 3-47
+
+++Elm und URLs++ - Von der Einfühung in WebApps sind die ersten beiden Unterkapitel dran, die nächsten beiden kommen dann in der Woche danach. - 1. Unterkapitel Navigation beschreibt wie eine Elm-App auf neue URLs reagieren kann. Wichtig sind die beiden Erweiterungen von Browser.element zu Browser.application, die das Main-Programm definieren. Wichtige Module -- Browser -- Browser.Navigation -- URL-Package und Url - 2. Unterkapitel Parsing URLs um die veränderten URLs zu analysieren, was genau sich geändert hat.
+
+Aufgaben
+Diese Aufgaben können nicht mit Ellie bearbeitet werden, weil hier die URL ebenfalls von dem Elm-Programm kontrolliert werden soll. Sie müssen sich statt dessen Elm installieren und auf ihrem lokalen Computer entwickeln. Die Aufgaben können deshalb auch nicht mehr im Wiki verlinkt werden. Statt dessen können das folgende Git-Repository https://gitlab-lehre.informatik.uni-halle.de/alexander.hinneburg/www_test clonen, dort ihre Aufgaben bearbeiten und dann die Lösungen einchecken. Lesen sie Details in der README.md Datei.
+
+6.1 Umbau auf Browser.document
+Bisher nutzen sie Browser.element oder Browser.sandbox, um das Main-Programm zu definieren. Als Zwischenschritt sollen Sie Browser.document nutzen, um das Main-Programm zu definieren. Sie brauchen dafür die beiden Packages elm/url und elm/browser, die sie installieren müssen. Mit Browser.document können sie einen Titel für die Web-App vergeben. Erweitern Sie ausgehend von den Beispielen in Kapitel Web Apps ihr Programm vom letzten Mal. Löschen Sie das main-Element aus dem HTML-Teil und ändern Sie im Javascript-Teil, dass die Funktion Elm.Main.init ohne Parameter aufgerufen wird.
+
+var app = Elm.Main.init();
+6.2 Umbau auf Browser.application.
+Erweitern sie in einem zweiten Schritt ihr Programm von Browser.document auf Browser.application wie es in Kapitel Navigation erklärt wird. Sie müssen mehrere neue Module importieren:
+
+import Browser
+import Browser.Navigation as Nav
+import Url
+Erweitern Sie ihr Model um die beiden neuen Einträge
+
+, key : Nav.Key
+, url : Url.Url
+Diese Änderung erzwingt Änderungen in der Signatur von main und der Definition von init. Sie können die entsprechenden Zeilen aus dem Elm-Guide übernehmen in ihr Programm übernehmen und anpassen. Erweitern Sie ebenfalls den Typ Msg um die zwei Fälle
+
+  | LinkClicked Browser.UrlRequest
+  | UrlChanged Url.Url
+Übernehmen Sie aus dem Beispiel im Elm-Guide den Code aus der update-Funktion, die diese zwei Fälle behandelt. Wenn sie den Code in der Update-Funktion für LinkClicked Browser.UrlRequest aus dem Beispiel übernehmen, dann würde ihre Seite immer als externe Seite behandelt werden und neu laden. Das Klicken wird immer dann als externe Seite eingeordnet, wenn in einem Link-Element a das Attribute href fehlt. Wenn Sie kein href angeben wollen, weil sie ja nur das Klicken abfragen wollen, dann würde href "" ausreichen, um den Verweis Seite als intern zu machen.
+
+Sie sind fertig, wenn ihr Programm sich wieder kompilieren lässt und so funktioniert wie vorher.
+
+6.3 Arbeiten mit der Browser-Historie
+In Aufgabe 6.2 haben sie den Code aus dem Beispiel übernommen, der bei einer Änderung der URL aufgerufen wird.
+
+UrlChanged url ->
+      ( { model | url = url }
+      , Cmd.none
+      )
+Dieser Code übernimmt nur die geänderte URL ins das Model. Bauen Sie in ihr Programm einen Button ein, der keine onClick Funktion nutzt, dafür aber einen relativen Link mit dem Fragment fenster. Erweitern sie den oben gezeigten Code für URL-Wechsel, so dass bei dem Wechsel zu dem fragment Fenster ebenfalls die JSON-Datei fenster-liste.json geladen wird. Bauen sie einen weiteren Button für das Fragment tueren mit dem die JSON-Datei tueren-liste.json geladen werden soll. Durch den Wechsel der URL können sie die Browser-Historie nutzen, d.h. der Back- und Forward-Button der Browser funktionieren auch in ihrer Web-App, wie sie an diesem Demo-Beispiel ausprobieren können.
+
+Erweitern sie ebenfalls die Init-Funktion, so dass die URL-Fragmente ebenfalls beim ersten Laden der Seite berücksichtigt werden.
+
+----
+
+07 DNS
+Zuletzt geändert von PD Dr. Alexander Hinneburg am 09.04.2026, 11:45:14
+DNS und Elm Programmiertechniken
+Aufbau und Programmiertechniken von Elm-WebApps
+Entwickeln von kleineren Elm-Projekten: Elm Europe 2017 - Evan Czaplicki - The life of a file (Video 47 min)
+Von einem kleinen zu einem großen Elm-Projekt: Elm Europe 2017 - Richard Feldman - Scaling Elm Apps (Video 59 min), Blog: Tour of an Open-Source Elm SPA , Github: [rtfeldman/elm-spa-example]https://github.com/rtfeldman/elm-spa-example
+Entwicklung von Datenstrukturen in Elm: "Making Impossible States Impossible" by Richard Feldman (Video 25 min)
+Domain-Name-System (DNS)
+Folien 2-3 bis 2-60 als Vorbereitung auf die Prüfung.
+Es gibt keine Übungen mehr. Sie können in der Zeit Do 12-16 Uhr an ihrem Projekt arbeiten und Projekt-spezifische Fragen diskutieren.
+
+----
+
+08 Internet
+Zuletzt geändert von PD Dr. Alexander Hinneburg am 09.04.2026, 11:49:02
+Internet und Netzwerke
+Internet und Netzwerke
+Folien 1-4 bis 1-33
+Folien 1-49 bis 1-99
+Es gibt keine Übungen mehr. Sie können in der Zeit Do 12-16 Uhr an ihrem Projekt arbeiten und Projekt-spezifische Fragen diskutieren.
+
+----
+
+09 XML
+Zuletzt geändert von PD Dr. Alexander Hinneburg am 09.04.2026, 11:52:04
+SGML und XML
+die Grundlagen zur Syntax hatten wir schon in den ersten beiden Veranstaltungen
+Folien 4-72 bis 4-176
+++XML DTDs++ - Folien 5-4 bis 5-41
+
+++XML Name Spaces++ - Folien 6-4 bis 6-23
+
+Es gibt keine Übungen mehr. Sie können in der Zeit Do 12-16 Uhr an ihrem Projekt arbeiten und Projekt-spezifische Fragen diskutieren.
+
+----
+
+Projekte
+Zuletzt geändert von PD Dr. Alexander Hinneburg am 09.04.2026, 11:54:01
+Zeitplan für Vorstellungen am 16.7.2026
+Am 16.7.26 sollen die Projekte, die alle Voraussetzungen erfüllen, von 12-16 Uhr vorgestellt werden. Die Vorstellung findet im Pool 3.02 statt. Planen Sie für Ihren Vortrag 10 min ein und 5 min um Fragen zu beantworten. Wenn Sie aus dringenden Gründe nicht in Präsenz teilnehmen können, gäbe es auch die Möglichkeit online teilzunehmen.
+
+Im Vortrag sollen Sie Ihr Projekt inhaltlich vorstellen und Ihre Software demonstrieren. Gehen Sie anschließend bitte auf den Programmcode ein. Skizzieren Sie den Aufbau Ihres Programms. Wählen Sie ein interessantes Details aus, das Sie etwas genauer erklären. Bereiten Sie 2-5 Folien als PDF-Datei vor, die Sie bitte im studip vorher hochladen.
+
+Der vorläufiger Ablaufplan setzt voraus, dass die aufgeführten Projekte noch bis nächste Woche 16.7.2026 alle Mindestvoraussetzungen erfüllen. Sie können danach gern noch weiter an dem Code arbeiten. Alle Projekte, die nächste Woche noch nicht alle Mindestanforderungen erfüllen, würde ich aus der Liste raus nehmen.
+
+Projekte, die (fast) alle Kriterien erfüllen mit Zeiten für die Vorstellung:
+
+noch offen:
+
+Angenommene Projekte
+
+
+
+
+
+
+
+
+
+
+
+
+Mündliche Prüfung, 2. Hälfte im August

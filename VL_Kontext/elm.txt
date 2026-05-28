@@ -1,0 +1,11 @@
+Liebe Studierende,
+
+für einige war die Verwendung der Programmiersprache Elm im Gegensatz zu JavaScript oder TypeScript ein Punkt, an dem sie sich gewünscht haben, Elm nicht benutzen zu müssen. Ich habe für mich Pro und Contra-Argumente gesammelt und mich weiterhin mit Kollegen vom Lehrstuhl Softwaretechnik beraten. Das Ergebnis ist: Die Projekte müssen in allen o.g. wesentlichen Funktionen in Elm umgesetzt werden. JavaScript kann nur genutzt werden, um optionale zusätzliche Funktionen zu implementieren. Für die wesentlichen Funktionen darf JavaScript nicht genutzt werden.
+
+In diesem Sinn habe ich die Seite Inhalte und Vorlesung und Übung aktualisiert. Damit möchte ich in dem Punkt frühzeitig Klarheit schaffen und sie können sich auf dieser Grundlage entscheiden, ob sie die Vorlesung unter diesen Bedingungen weiter besuchen wollen.
+
+Die Liste mit Argumenten sehen Sie im Wiki und können sie auch gern ergänzen.
+
+Viele Grüße,
+
+Alexander Hinneburg
