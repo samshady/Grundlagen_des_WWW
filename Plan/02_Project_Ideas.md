@@ -1,171 +1,141 @@
-# Projektideen — Eigenentwicklungen
+# Projektideen — Brainstorming
 
 > Alle Ideen hier sind original und nicht aus anderen Proposal-Vorschlägen übernommen.
 > Kriterien: Alle Pflichtkomponenten abdeckbar, machbar in 5–6 Wochen, interessant für Präsentation.
+>
+> **Wichtig**: Clean > komplex. Lieber eine kleine, runde App als ein überladenes Projekt.
+> Ziel ist eine saubere Präsentation, nicht ein "Advanced Project".
 
 ---
 
-## Idee 1: Pokédex Browser (⭐ Empfohlen)
+## Idee 1: Book Search & Reading List (⭐ Empfohlen)
 
-**Beschreibung**: Eine Elm-Web-App, die Pokémon-Daten über die freie [PokéAPI](https://pokeapi.co/) lädt. Nutzer können nach Pokémon suchen, sie nach Typ filtern und detaillierte Infos anzeigen lassen. Ein interaktives **SVG-Radardiagramm** visualisiert die Statuswerte (KP, Angriff, Verteidigung, etc.) jedes Pokémon. Die App nutzt Bulma für das Styling und URL-Routing für die Navigation zwischen Suchergebnissen und Detailansichten.
+**Beschreibung**: Eine Elm-Web-App, die Bücher über die [Open Library API](https://openlibrary.org/developers/api) sucht. Nutzer geben einen Titel oder Autor ein und erhalten eine Liste mit Ergebnissen. Jedes Buch zeigt Cover, Titel, Autor und Erscheinungsjahr. In der Detailansicht gibt es eine ausführliche Beschreibung und ein **interaktives SVG-Donut-Chart**, das die Verteilung der Genres oder Erscheinungsjahrzehnte visualisiert. Bücher können zu einer persönlichen Leseliste hinzugefügt werden.
 
 **Pflichtkomponenten**:
 | Komponente | Umsetzung |
 |---|---|
-| HTML | Struktur (Search-Bar, Filter, Kartenansicht, Detail-View) |
-| CSS | Bulma Cards, Navbar, Modals, Responsive Grid |
-| SVG | **Status-Radardiagramm** pro Pokémon (Typ-abhängig eingefärbt) |
-| Elm | Ganze Logik in Elm (TEA, Custom Types für Pokémon-Typen) |
-| URL | `/`, `/search?q=...`, `/pokemon/:id`, `/type/:type` |
-| HTTP | Fetch von PokéAPI + JSON-Decoder (verschachtelte JSON-Struktur) |
+| HTML | Suchmaske, Buchkarten, Detailansicht, Leseliste |
+| CSS | Bulma Cards, Navbar, Responsive Grid, Modal für Details |
+| SVG | **Donut-/Ring-Chart** für Genre-Verteilung oder Lesestatistik |
+| Elm | TEA, Route-Typen, Leseliste im Model |
+| URL | `/`, `/search?q=...`, `/book/:key`, `/readinglist` |
+| HTTP | Open Library Search API + Books API (kein API-Key!) |
 
 **Warum diese Idee**:
-- ✅ Fantastische, freie API (kein API-Key nötig, gut dokumentiert)
-- ✅ Visuell sehr ansprechend (Farben, Typ-Icons, SVG-Chart)
-- ✅ Natürliche SVG-Nutzung: Radar-Chart ist perfekt für SVG
-- ✅ Klares Routing: Suche → Liste → Detail
-- ✅ Riesiger "Wow-Faktor" in der Präsentation
-- ✅ Erweiterbar: Vergleich zweier Pokémon, Favoriten, Evolution-Chain
+- ✅ Open Library: frei, kein API-Key, gut dokumentiert, CORS-freundlich
+- ✅ Bücher sind universell — jeder versteht das Thema sofort
+- ✅ Klare Route-Struktur: Suche → Liste → Detail → Leseliste
+- ✅ Natürliches SVG: Genre-Verteilung als Donut-Chart
+- ✅ Partner kann sich an ansprechenden Buchkarten austoben
+- ✅ Nützlich: eine Leseliste ist ein echtes Feature
 
-**JSON-Herausforderung** (guter Punkt für die Präsentation):
+**JSON-Beispiel** (tasteful technical depth):
 ```elm
--- Verschachtelter Decoder für Pokémon-Status
-type alias Stats =
-    { hp : Int, attack : Int, defense : Int
-    , specialAttack : Int, specialDefense : Int, speed : Int }
+-- Open Library JSON ist flach genug für einen sauberen Decoder
+type alias Book =
+    { key : String
+    , title : String
+    , author : Maybe String
+    , coverUrl : Maybe String
+    , firstPublishYear : Maybe Int
+    }
 ```
 
-**Mögliche Erweiterungen**:
-- Evolution-Chain als SVG-Baum
-- Typ-Schwächen/Kräfte-Matrix
-- Zufalls-Pokémon-Button
-- Dark/Light Mode per CSS
-
 ---
 
-## Idee 2: Space Explorer (NASA APIs)
+## Idee 2: Makeup Shade Explorer
 
-**Beschreibung**: Eine Elm-App, die verschiedene NASA-APIs nutzt: **Astronomy Picture of the Day (APOD)** und **Mars Rover Photos**. Nutzer können APOD-Bilder nach Datum durchstöbern, Mars Rover-Fotos nach Sol (Marstag) filtern und eine interaktive **SVG-Ansicht des Sonnensystems** erkunden, in der Planeten positioniert und animiert sind.
+**Beschreibung**: Eine Elm-Web-App, die Makeup-Produkte über die [Makeup API](https://makeup-api.herokuapp.com/) durchsucht. Nutzer können nach Marke, Produkttyp (Lippenstift, Lidschatten, Foundation, etc.) und Farbe filtern. Ein **interaktives SVG-Farbfeld** zeigt verfügbare Farbtöne als klickbare Swatches. Die Detailansicht zeigt Preis, Bewertung, Produktbild und Beschreibung.
 
 **Pflichtkomponenten**:
 | Komponente | Umsetzung |
 |---|---|
-| HTML | Galerielayout, Detailseiten, Kalenderauswahl |
-| CSS | Bulma für dark-theme Layout |
-| SVG | **Sonnensystem-Visualisierung** (Planeten positioniert, skalierend, bei Klick Detailinfos) |
-| Elm | State-Management für API-Responses, Filter, Caching |
-| URL | `/`, `/apod?date=...`, `/mars?sol=...`, `/solarsystem` |
-| HTTP | Mehrere NASA-Endpoints (APOD, Mars Photos) + JSON-Decoder |
-
-**API-Key**: Kostenloser API-Key von https://api.nasa.gov/ (sofort, 1000 Req/h)
+| HTML | Such-/Filter-Maske, Produktkarten, Detailansicht |
+| CSS | Bulma mit pastelligen/swatch-artigen Farbschemata |
+| SVG | **Farb-Swatch-Raster** — klickbare Farbfelder, die nach Farbfamilie sortiert sind |
+| Elm | Filter-Logik, State-Management für ausgewählte Produkte |
+| URL | `/`, `/search?brand=...`, `/product/:id`, `/compare` |
+| HTTP | Makeup API (frei, kein API-Key, einfaches JSON) |
 
 **Warum diese Idee**:
-- ✅ Mehrere API-Endpunkte = reichhaltige HTTP-Nutzung
-- ✅ SVG-Sonnensystem ist interaktiv + lehrreich
-- ✅ Sehr visuell, toll für Präsentation
-- ✅ URL-Routing zwischen verschiedenen "Welten" (APOD, Mars, Solar)
-- ✅ Wissenschaftlicher Kontext kommt gut an
+- ✅ Partner-Thema: Makeup/Skincare ist nah an ihren Interessen
+- ✅ API ist simpel: flaches JSON, kein API-Key
+- ✅ SVG-Swatches sind visuell und interaktiv (klickbar = Filter)
+- ✅ "Shade Finder" — nützliches Konzept (welcher Lippenstift passt zu mir?)
+- ✅ Vergleichsfunktion ist eine nette Erweiterung
 
-**Nachteile**:
-- ⚠️ Benötigt API-Key (muss in Config, nicht committed werden)
-- ⚠️ Bilder sind groß → Ladezeiten bedenken
+**API-Hinweis**: Die Makeup API liefert Produkte mit `product_colors` als Array von Hex-Farben — ideal für SVG-Swatch-Rendering.
 
 ---
 
-## Idee 3: Rezept-NutriScanner
+## Idee 3: Flashcard Study App
 
-**Beschreibung**: Ein Tool, das Nährwertinformationen zu Lebensmitteln visualisiert. Nutzer geben eine Zutat oder ein Gericht ein, die App lädt Daten von der [Open Food Facts API](https://world.openfoodfacts.org/) (freie, offene Datenbank). Ein interaktives **SVG-Pie-Chart + Balkendiagramm** zeigt Makro- und Mikronährstoffe farblich an. Nutzer können mehrere Lebensmittel vergleichen und sehen, wie sie sich zu einer Mahlzeit summieren.
+**Beschreibung**: Eine Karteikarten-Lern-App in Elm. Nutzer können Kartensets zu verschiedenen Themen erstellen und durchgehen. Ein **SVG-Fortschrittsbalken** zeigt den Lernfortschritt an. Optional: Kartendaten über die [Open Trivia DB](https://opentdb.com/api_config.php) als JSON nachladen.
 
 **Pflichtkomponenten**:
 | Komponente | Umsetzung |
 |---|---|
-| HTML | Suchmaske, Produktkarten, Vergleichsansicht |
-| CSS | Bulma Cards, Progress-Bars für Nährstoffe |
-| SVG | **Pie-Chart + gestapeltes Balkendiagramm** (responsive, interaktiv per Hover) |
-| Elm | Komplexe JSON-Decoder (Open Food Facts hat tiefe JSON-Struktur) |
-| URL | `/`, `/search?q=...`, `/product/:barcode`, `/compare` |
-| HTTP | Open Food Facts API + Barcode-Suche |
+| HTML | Karteneditor, Lernansicht, Set-Übersicht |
+| CSS | Bulma Cards, Flip-Animation (CSS), Progress-Bar |
+| SVG | **Fortschrittsbalken / Ring** — visuelles Lern-Feedback |
+| Elm | Karten-State (gewusst/nicht gewusst), Session-Management |
+| URL | `/`, `/sets`, `/sets/:id/learn`, `/sets/:id/edit` |
+| HTTP | Optional: Open Trivia DB API für vorgefertigte Fragen |
 
 **Warum diese Idee**:
-- ✅ Open Food Facts ist komplett offen, kein API-Key
-- ✅ Barcode-Daten sind real und interessant
-- ✅ SVG-Charts sind präsentabel
-- ✅ Gute Vergleichbarkeit (Nährwerte nebeneinander)
-- ✅ Erweiterbar: Tagesplan, Nährstoffziele, Barcode-Scanner-Integration
+- ✅ Super nützlich fürs Studium — jeder kann es brauchen
+- ✅ Klare, einfache Datenstruktur (Liste von Karten mit Frage/Antwort)
+- ✅ SVG-Fortschrittsanzeige ist simpel, aber effektiv
+- ✅ Partner kann UI/UX gestalten (schöne Karten-Layouts)
+- ✅ Ohne API-Key, ohne externe Abhängigkeiten
+- ✅ Trivia-DB ist optionale Erweiterung (HTTP-Pflichtkomponente sichern)
 
-**Besonderheit für die Prüfung**: Komplexe JSON-Decoder + geschachtelte Typen in Elm sind gute Prüfungsthemen.
+**Einschränkung**: Ohne Open Trivia DB müsste die HTTP-Komponente anders erfüllt werden (z.B. JSON-Datei lokal laden oder eigene Mini-API).
 
 ---
 
-## Idee 4: GitStash — GitHub Profil-Explorer
+## Idee 4: Grade Tracker (Notenrechner)
 
-**Beschreibung**: Eine Elm-App, die GitHub-Profile und Repositories über die öffentliche GitHub API erkundet. Nutzer geben einen GitHub-Usernamen ein und sehen das Profil, eine Liste der Repos und Statistiken. Ein **interaktives SVG-Bubble-Chart** visualisiert die Sprachenverteilung aller Repos eines Users, wobei die Größe der Blasen die Anzahl der Projekte in einer Sprache repräsentiert.
+**Beschreibung**: Ein Tool zur Verwaltung und Visualisierung von Studienleistungen. Nutzer tragen Module, Credits und Noten ein. Die App berechnet den aktuellen Notenschnitt und zeigt mit einem **SVG-Balkendiagramm** die Notenverteilung über alle Module an.
 
 **Pflichtkomponenten**:
 | Komponente | Umsetzung |
 |---|---|
-| HTML | Profilkopf (Avatar, Bio, Stats), Repo-Liste |
-| CSS | Bulma mit GH-artigem Theme |
-| SVG | **Bubble-Chart** der Sprachen (farbkodiert, klickbar → Filter) |
-| Elm | Rate-Limit-Handling, Pagination, Error-Handling |
-| URL | `/`, `/user/:username`, `/user/:username/repo/:repo` |
-| HTTP | GitHub REST API v3 (Users, Repos, Languages) |
+| HTML | Modul-Liste, Noten-Formular, Statistik-Ansicht |
+| CSS | Bulma mit cleanem, sachlichem Design |
+| SVG | **Balkendiagramm** für Notenverteilung (interaktiv: hover zeigt Details) |
+| Elm | Berechnungslogik, Filter (Semester, Fachbereich) |
+| URL | `/`, `/grades`, `/grades/add`, `/stats` |
+| HTTP | Noten aus einer JSON-Datei laden / Beispiel-Datensatz fetchen |
 
 **Warum diese Idee**:
-- ✅ Praktisch: Jeder kann sein eigenes Profil eingeben
-- ✅ GitHub API ist stabil und gut dokumentiert
-- ✅ Erweiterbar: Star-Historie, Contributor-Graphen
-- ✅ Bubble-Chart als SVG ist technisch interessant
+- ✅ Extrem nützlich — echter Mehrwert für den Studienalltag
+- ✅ Keine externe API nötig → volle Kontrolle
+- ✅ HTTP-Pflichtkomponente: Beispiel-Notenset von einer URL laden
+- ✅ Partner kann saubere, übersichtliche UI gestalten
+- ✅ Präsentationsthema: "Damit haben wir selbst im Studium zu tun"
 
-**Nachteile**:
-- ⚠️ Rate-Limited (60 Req/h ohne Token, 5000 mit Token)
-- ⚠️ Weniger visuell beeindruckend als Pokédex/Space
-
----
-
-## Idee 5: Movie Night Planner
-
-**Beschreibung**: Eine App, die Filme über die [OMDb API](http://www.omdbapi.com/) sucht und eine Watchlist verwaltet. Nutzer suchen Filme, sehen Details (Poster, Rating, Genre, Plot) und können sie zu einer persönlichen Watchlist hinzufügen. Ein **SVG-Jahresrad** (ring chart) zeigt die Verteilung der Filme nach Jahrzehnt oder Genre.
-
-**Pflichtkomponenten**:
-| Komponente | Umsetzung |
-|---|---|
-| HTML | Suchfeld, Filmkarten, Watchlist |
-| CSS | Bulma Cards + Modal für Details |
-| SVG | **Ring-Chart** für Genre-Verteilung / Jahresverteilung |
-| Elm | Watchlist-State (lokal), HTTP, Routing |
-| URL | `/`, `/search?q=...`, `/movie/:id`, `/watchlist` |
-| HTTP | OMDb/TMDB API + JSON-Decoder |
-
-**Warum diese Idee**:
-- ✅ Sehr intuitiv: Jeder kennt Filme
-- ✅ OMDb ist simpel (1 Endpoint, einfaches JSON)
-- ✅ Watchlist + SVG-Chart = State-Management + Visualisierung
-- ✅ Klar strukturierte Views
+**Einschränkung**: Die HTTP-Komponente müsste etwas konstruiert werden (Beispieldaten von GitHub Pages oder ähnlich hosten). Machbar, aber weniger elegant als eine echte API.
 
 ---
 
 ## Entscheidungsmatrix
 
-| Kriterium | Pokédex | Space Explorer | NutriScanner | GitStash | Movie Night |
-|---|---|---|---|---|---|
-| API-Qualität | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
-| Kein API-Key nötig | ✅ | ❌ (NASA) | ✅ | ✅* | ❌ (OMDb) |
-| Visueller Wow-Effekt | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ |
-| SVG-Komplexität | Mittel (Radar) | Mittel-Hoch | Mittel | Mittel | Einfach-Mittel |
-| JSON-Decoder-Komplexität | Mittel | Mittel | **Hoch** | Mittel | Einfach |
-| Präsentations-Eignung | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ |
-| Erweiterbarkeit | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ |
-
-*\* GitHub mit Token (5000 Req/h) besser nutzbar*
-
-**→ Empfehlung**: Pokédex Browser oder Space Explorer — beide haben hohen Wow-Faktor, gute APIs und natürliche SVG-Nutzung.
+| Kriterium | Book Search | Makeup Explorer | Flashcards | Grade Tracker |
+|---|---|---|---|---|
+| API-Qualität | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ (optional) | ⭐⭐⭐ (konstruiert) |
+| Kein API-Key | ✅ | ✅ | ✅ (optional Trivia) | ✅ (selbst gehostet) |
+| Partner-Appeal | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ |
+| Natürliches SVG | ⭐⭐⭐⭐ (Donut) | ⭐⭐⭐⭐⭐ (Swatches) | ⭐⭐⭐ (Progress) | ⭐⭐⭐⭐ (Bar-Chart) |
+| JSON-Komplexität | Mittel | Einfach | Einfach | Einfach |
+| Präsentationseignung | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
 
 ---
 
 ## Nächste Schritte
 
-1. Mit Partner besprechen welche Idee am meisten begeistert
+1. Mit Partner besprechen — welche Idee begeistert am meisten?
 2. 3–4 Sätze Beschreibung formulieren
 3. Im Wiki eintragen (bei Hinneburg zur Genehmigung)
 4. Nach Genehmigung: loslegen!

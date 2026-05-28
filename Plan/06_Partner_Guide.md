@@ -1,6 +1,7 @@
 # Guide für Partner (keine Vorkenntnisse)
 
 > Hiermit kannst du deine Partnerin Schritt für Schritt einweisen.
+> Ihre Hauptrolle: **UI/Styling + Testing** — sie gestaltet die Optik und testet die App.
 
 ---
 
@@ -52,34 +53,45 @@ git push
 
 ## Woche 3: Projektarbeit beginnen
 
-### Aufteilung (für Pokédex Browser)
-| Person A (du) | Person B (Partnerin) |
+### Aufteilung (generisch — anpassen nach Projektwahl)
+| Person A (du) | Person B (Partnerin — UI/Styling + Testing) |
 |---|---|
-| Projekt-Struktur + Routing | HTML-Views (Home, Search, Detail) |
-| HTTP + JSON-Decoder | Bulma-Klassen + Styling |
-| Elm-Routing | SVG-Radar-Chart |
-| Deployment | Testen |
+| Elm-Projekt-Struktur + `elm init` | **Bulma-Styling**: Farben, Abstände, Navbar, Karten |
+| `Browser.application` + Routing | **HTML-Views**: Home-Seite, Suchergebnisse, Detailansicht |
+| HTTP-Requests + JSON-Decoder | **SVG-Farben**: Farb-Mapping für Chart-Komponenten |
+| SVG-Berechnungen (Chart-Logik) | **Fehlersuche**: manuelles Testen aller Routen und States |
+| Deployment (GitLab/GitHub Pages) | **Bulma-Komponenten**: Cards, Modals, Notifications, Formulare |
+| Integration + Pair Programming | **Mobile Ansicht testen** |
+
+### Was die Partnerin konkret macht (Beispiele)
+- Farbpalette für die App festlegen (z.B. "pastellige Töne für Buch-App")
+- Bulma-Klassen in den View-Funktionen setzen: `class "card"`, `class "button is-primary"`
+- Leere-Zustände gestalten: "Keine Ergebnisse" mit freundlicher Nachricht
+- Bei Detailansicht: Layout mit linkem/rechtem Panel entwerfen
+- Hover-Effekte auf Karten testen und Feedback geben
 
 ### Pair Programming Sessions
 - 1–2x pro Woche zusammen programmieren (jeweils 2h)
 - Screenshare via Discord/Meet
-- Abwechselnd Code schreiben
+- Abwechselnd Code schreiben (sie: HTML/CSS-Teile, du: Elm-Logik)
 
 ---
 
 ## Woche 4–5: UI + SVG
 
-- Gemeinsam das SVG-Diagramm designen
-- Partnerin: CSS-Anpassungen, Bulma-Komponenten
+- Gemeinsam das SVG-Diagramm designen und besprechen
+- Partnerin: Bulma-Komponenten einbauen, Farben testen
+- Partnerin: Alle Routen manuell durchklicken und Fehler melden
 - GitHub Issues / GitLab Boards für Aufgaben nutzen
 
 ---
 
 ## Woche 6: Präsentation üben
 
-- Partnerin: 2–3 Folien selbst erstellen
+- Partnerin: 2–3 Folien selbst erstellen (z.B. UI-Design, Ziel der App)
 - Beide: 10-minütigen Vortrag durchspielen
 - Wer sagt was? Aufteilung der Redezeit
+- Partnerin kann die UI/UX-Entscheidungen erklären (Farbwahl, Layout, Bulma)
 
 ---
 
@@ -91,6 +103,7 @@ git push
 | Ellie (Online-Editor) | https://ellie-app.com |
 | Elm Packages | https://package.elm-lang.org/ |
 | Bulma Framework | https://bulma.io/ |
+| Bulma Dokumentation | https://bulma.io/documentation/ |
+| Bulma Components | https://bulma.io/documentation/components/ |
 | GitLab Lehre | https://gitlab-lehre.informatik.uni-halle.de/ |
-| PokéAPI | https://pokeapi.co/ |
 | Learn You an Elm | https://learnyouanelm.github.io/ |
