@@ -1,6 +1,9 @@
-# Pokédex Browser — Projektplan
+# Pokédex Browser — Projektplan (Referenz)
 
-> Empfohlenes Projekt für Grundlagen des World Wide Web (SS26)
+> Dies war eine ursprünglich empfohlene Projektidee. Nach weiterer Überlegung ist sie
+> zurückgestellt — das finale Projekt wird mit der Partnerin abgestimmt.
+> Diese Datei dient als **technische Referenz** für den Aufbau eines Elm-Projekts
+> mit vergleichbarer Komplexität (4 Routen, externe API, HTTP + JSON, SVG-Chart).
 
 ---
 
