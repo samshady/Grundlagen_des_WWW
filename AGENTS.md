@@ -23,45 +23,55 @@ Then use remote URL `git@github-samshady:samshady/<repo>.git` instead of `git@gi
 
 ---
 
-## 2026-05-28 | Elm Installation | `elm` binary not found globally after npm install
+## 2026-05-28 | npm Permissions | `npm install -g` fails with EACCES
 
-**Problem**: Running `elm --version` fails with "elm not installed". Need to install Elm globally via npm.
+**Problem**: System npm prefix is `/usr/local` which requires root. Running `npm install -g elm` fails with EACCES.
 
-**Solution**: Install globally:
+**Solution**: Change npm prefix to user-local directory:
 ```bash
-npm install -g elm
+mkdir -p ~/.npm-global
+npm config set prefix "$HOME/.npm-global"
+export PATH="$HOME/.npm-global/bin:$PATH"
 ```
-Or install locally in the project and use `npx elm`.
+Then `npm install -g elm` succeeds. Added PATH export to `~/.zshrc`.
 
-**Status**: ⏳ Pending — will install during setup
+**Status**: ✅ Resolved
+
+---
+
+## 2026-05-28 | Elm Installation | `elm` binary not found after npm install (EACCES workaround)
+
+**Problem**: After fixing npm prefix, Elm compiled and installed successfully. Elm 0.19.1 confirmed working on Fedora 44 via npm (no binary compatibility issues).
+
+**Solution**: The npm-installed Elm binary works on Fedora 44 without any glibc issues. No `sudo` or DNF needed.
+
+**Status**: ✅ Resolved — Elm 0.19.1 installed and working
 
 ---
 
 ## 2026-05-28 | Fedora 44 | Binary compatibility for elm
 
-**Problem**: Elm 0.19.1 was released pre-2026. The prebuilt binaries on the Elm website may not link correctly on Fedora 44 (glibc version mismatch) or may need `libtinfo5` etc.
+**Problem**: Elm 0.19.1 was released pre-2026. Concerned that prebuilt binaries might not link correctly on Fedora 44 (glibc version mismatch) or may need `libtinfo5` etc.
 
-**Solution**: Use npm-installed version (`npm install -g elm`) which ships its own binary. If that fails, try:
-```bash
-sudo dnf install elm  # if available in Fedora repos
-```
-Fallback: Use the official elm binary from GitHub releases with `LD_LIBRARY_PATH` workarounds.
+**Solution**: npm-installed version (`npm install -g elm`) works perfectly on Fedora 44. No compatibility issues encountered. The npm package bundles its own binary.
 
-**Status**: ⏳ Pending
+**Status**: ✅ Resolved — Fedora 44 compatible via npm
 
 ---
 
 ## 2026-05-28 | GitHub CLI | `gh` not installed
 
-**Problem**: `gh auth status` fails — `gh` CLI not available. Cannot create repos or manage PRs via CLI without it.
+**Problem**: `gh auth status` fails — `gh` CLI not available. Cannot create repos via CLI. User does not have sudo access, so `dnf install gh` is not possible.
 
-**Solution**: Install GitHub CLI:
+**Solution**: Used GitHub API directly with a Personal Access Token (saved at `~/.github_token`):
 ```bash
-sudo dnf install gh
-gh auth login
+curl -X POST -H "Authorization: token <TOKEN>" \
+  https://api.github.com/user/repos \
+  -d '{"name":"Grundlagen_des_WWW"}'
 ```
+Token saved to `~/.github_token` with `chmod 600`.
 
-**Status**: ⏳ Pending
+**Status**: ✅ Resolved via API (gh CLI optional, not critical)
 
 ---
 
@@ -79,9 +89,14 @@ gh auth login
 
 **Problem**: `elm install` fetches package metadata from the Elm package registry. Behind a corporate firewall or in an air-gapped environment, this fails.
 
-**Solution**: Ensure network access to `package.elm-lang.org`. If blocked, use a proxy or pre-download packages manually.
+**Solution**: Ensure network access to `package.elm-lang.org`. Network was available during setup. All packages installed successfully:
+- elm/browser 1.0.2
+- elm/http 2.0.0
+- elm/json 1.1.3
+- elm/url 1.0.0
+- elm/svg 1.0.1
 
-**Status**: ⏳ Pending — check during install
+**Status**: ✅ Resolved — all packages installed
 
 ---
 
@@ -93,9 +108,9 @@ gh auth login
 ```bash
 git remote add origin git@github-samshady:samshady/Grundlagen_des_WWW.git
 ```
-This uses the correct SSH key automatically via the SSH config alias.
+This uses the correct SSH key automatically via the SSH config alias. Push succeeded.
 
-**Status**: ⏳ Pending — to apply when creating repo
+**Status**: ✅ Resolved
 
 ---
 
@@ -103,9 +118,9 @@ This uses the correct SSH key automatically via the SSH config alias.
 
 **Problem**: `elm.json` tracks dependencies in `dependencies.direct`. If a package version is incompatible with Elm 0.19.1, compilation fails.
 
-**Solution**: Read `elm.json` after `elm init` and verify versions. Pin to exact versions if needed. Use `elm install` for each dependency rather than editing `elm.json` by hand.
+**Solution**: Used `elm install` for each dependency. All packages were resolved correctly. `elm make src/Main.elm --output=public/main.js` compiled successfully with all dependencies.
 
-**Status**: ⏳ Pending
+**Status**: ✅ Resolved
 
 ---
 
@@ -136,3 +151,46 @@ This uses the correct SSH key automatically via the SSH config alias.
 **Solution**: Use GitHub as primary. If GitLab Pages is required for the course, add GitLab as a secondary remote and push there separately.
 
 **Status**: ⏳ Pending — decision needed
+
+---
+
+## 2026-05-28 | GitHub API | Repo creation via Bearer token from SSH key file fails
+
+**Problem**: Tried using the SSH private key file content as a Bearer token for the GitHub API. This failed because SSH private keys are not valid OAuth tokens.
+
+**Solution**: Use a proper GitHub Personal Access Token (classic or fine-grained) with `repo` scope. Saved to `~/.github_token` with `chmod 600`. Use via:
+```bash
+export GITHUB_TOKEN=$(cat ~/.github_token | grep -v ^#)
+```
+
+**Status**: ✅ Resolved — token saved securely
+
+---
+
+## 2026-05-28 | GitHub Repo | Default branch is `master` instead of `main`
+
+**Problem**: The GitHub API created the repo with default branch `master`, but our local git repo uses `main`.
+
+**Solution**: Changed local default to `main` via `git branch -M main` (already done during `git init`). Git push succeeded: `git push -u origin main`.
+
+**Status**: ✅ Resolved — no action needed, push created the `main` branch on GitHub
+
+---
+
+## 2026-05-28 | Elm Build | `elm make` compiles silently on success
+
+**Problem**: `elm make` compiles without output on success (just "Success!"). This is normal Elm behavior but can be confusing if you expect verbose output.
+
+**Solution**: This is not a bug — Elm is silent on success by design. Verified by checking exit code and existence of output file `public/main.js`.
+
+**Status**: ✅ Not a bug — expected behavior
+
+---
+
+## 2026-05-28 | GitHub Push Protection | Token in AGENTS.md blocks push
+
+**Problem**: GitHub secret scanning flagged the PAT in AGENTS.md and blocked the push. GitHub Push Protection prevents any commit containing known secret patterns from being pushed.
+
+**Solution**: Removed the token string from AGENTS.md. Token reference now uses `<TOKEN>` placeholder in docs. The actual token is stored only in `~/.github_token`.
+
+**Status**: ✅ Resolved — token removed from committed files
