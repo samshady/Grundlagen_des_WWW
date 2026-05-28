@@ -1,0 +1,6 @@
+elm-stuff/
+pokedex-browser/elm-stuff/
+pokedex-browser/public/main.js
+*.swp
+*.swo
+.DS_Store
