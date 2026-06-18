@@ -1,6 +1,8 @@
 elm-stuff/
-pokedex-browser/elm-stuff/
-pokedex-browser/public/main.js
+uni-project/elm-stuff/
+uni-project/public/main.js
 *.swp
 *.swo
 .DS_Store
+_private-notes/
+uni-project/_private-notes/
