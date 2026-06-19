@@ -15,8 +15,8 @@ npm install -g elm
 ## Projekt initialisieren
 
 ```bash
-mkdir pokedex-browser
-cd pokedex-browser
+mkdir uni-project
+cd uni-project
 elm init
 ```
 
@@ -51,19 +51,19 @@ elm make src/Main.elm --optimize --output=main.js
 ## Projekt-Struktur
 
 ```
-pokedex-browser/
+uni-project/
 ├── elm.json
 ├── src/
 │   ├── Main.elm         # Einstiegspunkt (Browser.application)
-│   ├── Types.elm        # Model, Pokemon, Route-Types
+│   ├── Types.elm        # Model, Domain-Types, Route-Types
 │   ├── Api.elm          # HTTP-Requests + JSON-Decoder
 │   ├── View.elm         # Haupt-View mit Routing
 │   ├── Views/
 │   │   ├── Home.elm     # Startseite
-│   │   ├── Search.elm   # Suchergebnisse
-│   │   └── Detail.elm   # Pokémon-Detail (mit SVG)
+│   │   ├── Closet.elm   # Garderoben-Ansicht
+│   │   └── About.elm    # Projekt-Info
 │   ├── Svg/
-│   │   └── Chart.elm    # SVG-Radardiagramm
+│   │   └── OutfitPreview.elm  # Outfit-Visualisierung
 │   └── Styles.elm       # CSS-Klassen (Bulma)
 ├── public/
 │   └── index.html       # HTML-Einstiegsseite
@@ -103,7 +103,7 @@ pages:
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pokédex Browser</title>
+  <title>Smart Wardrobe Planner</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 <body>
@@ -140,19 +140,19 @@ view : Model -> Html Msg
 
 ```elm
 -- HTTP-Request
-getPokemon : String -> Cmd Msg
-getPokemon query =
+loadWardrobeData : Cmd Msg
+loadWardrobeData =
     Http.get
-        { url = "https://pokeapi.co/api/v2/pokemon/" ++ query
-        , expect = Http.expectJson GotPokemon pokemonDecoder
+        { url = "/items.json"
+        , expect = Http.expectJson GotWardrobeData wardrobeDecoder
         }
 
 -- JSON-Decoder mit andThen (für bedingte Decodierung)
-pokemonDecoder : Decoder Pokemon
+wardrobeDecoder : Decoder WardrobeData
 decoder =
-    Decode.map2 Pokemon
-        (Decode.field "name" Decode.string)
-        (Decode.field "id" Decode.int)
+    Decode.map2 WardrobeData
+        (Decode.field "dresses" ...)
+        (Decode.field "jackets" ...)
 
 -- URL-Parsing
 parseRoute : Url.Url -> Route
@@ -169,7 +169,7 @@ parseRoute url =
 | Fehler | Lösung |
 |---|---|
 | `-- NO JS MODULE SYSTEM --` | Mit `--output=main.js` kompilieren |
-| `Http.expectJson` erwartet `(Result Error a -> msg)` | `GotPokemon`-Msg muss `Result` wrappen |
+| `Http.expectJson` erwartet `(Result Error a -> msg)` | `GotWardrobeData`-Msg muss `Result` wrappen |
 | SVG-Klassen nicht sichtbar | `Svg.Attributes.class` statt `Html.Attributes.class` verwenden |
 | CORS-Fehler in Ellie | Proxy `https://cors-anywhere.herokuapp.com/` nutzen |
 | `Browser.application` braucht `key` im Model | `Nav.Key`-Feld im Model ergänzen |

@@ -134,9 +134,9 @@ This uses the correct SSH key automatically via the SSH config alias. Push succe
 
 ---
 
-## 2026-05-28 | CORS | PokéAPI calls from local file:// or elm reactor
+## 2026-05-28 | CORS | HTTP calls from local file:// or elm reactor
 
-**Problem**: Browsers block CORS requests from `file://` protocol. `elm reactor` serves on `localhost:8000` which should work with PokéAPI (they allow CORS), but needs verification.
+**Problem**: Browsers block CORS requests from `file://` protocol. `elm reactor` serves on `localhost:8000` which should work with the JSON endpoint (CORS is configured), but needs verification.
 
 **Solution**: Always test HTTP via `elm reactor` or a proper web server, never `file://`. If CORS still fails, use a CORS proxy or configure a local dev server.
 

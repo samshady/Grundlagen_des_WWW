@@ -56,7 +56,7 @@ Browser.application
 - [x] Read all course materials
 - [x] Install Elm (npm) + verify compilation
 - [x] Initialize git repo + push to GitHub
-- [x] Set up Elm project scaffold (`pokedex-browser/`)
+- [x] Set up Elm project scaffold (`uni-project/`)
 - [x] Install Elm packages (browser, http, json, url, svg)
 - [x] Create dev docs: AGENTS.md, ENVIRONMENT_SETUP.md, IMPLEMENTATION_PLAN.md
 
@@ -153,7 +153,7 @@ You handle: Elm architecture, HTTP/JSON, routing logic, SVG calculations, deploy
 ## File Structure (Template — rename after project is chosen)
 
 ```
-pokedex-browser/            # Elm project directory (will be renamed)
+uni-project/                # Elm project directory
 ├── elm.json
 ├── src/
 │   ├── Main.elm            # Browser.application entry point
@@ -216,6 +216,6 @@ elm install elm/svg         # SVG rendering
 | **Flashcard Study App** | Self-made or Open Trivia DB | Study progress chart | Useful for uni, student tool |
 | **Grade Tracker** | No API (local data + HTTP for fun) | Grade distribution chart | Useful for uni, student tool |
 
-**Not pursuing**: Pokédex (too game-y for your taste), Cocktail Explorer, Space Explorer (API key hassle), GitStash (rate limits), Movie Night (API key), NutriScanner (overly complex JSON), UniKino (scraping, not JSON).
+**Not pursuing**: Cocktail Explorer, Space Explorer (API key hassle), GitStash (rate limits), Movie Night (API key), NutriScanner (overly complex JSON), UniKino (scraping, not JSON).
 
 → **Final decision**: discuss with partner after the 4 June lecture, submit proposal by 7 June.
