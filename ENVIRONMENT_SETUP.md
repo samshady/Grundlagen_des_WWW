@@ -99,11 +99,11 @@ git push -u origin main
 
 ## Step 4: Create the Elm Project
 
-We'll use the **Pokédex Browser** project. Inside the repo:
+We'll use the **Smart Wardrobe Planner** project. Inside the repo:
 
 ```bash
-mkdir -p pokedex-browser/src
-cd pokedex-browser
+mkdir -p uni-project/src
+cd uni-project
 elm init
 ```
 
@@ -135,7 +135,7 @@ Grundlagen_des_WWW/
 │   ├── 00_Module_Overview.md
 │   ├── 01_Roadmap_Plan.md
 │   ├── 02_Project_Ideas.md
-│   ├── 03_Projekt_Pokedex_Browser.md
+│   ├── 03_Projekt_Digital-Closet.md
 │   ├── 04_Elm_Installation_Setup.md
 │   ├── 05_Exam_Prep.md
 │   └── 06_Partner_Guide.md
@@ -149,19 +149,19 @@ Grundlagen_des_WWW/
 │       ├── c1_inet.pdf
 │       ├── c2_dns.pdf
 │       └── ...
-└── pokedex-browser/          # Elm project directory
+└── uni-project/              # Elm project directory
     ├── elm.json
     ├── src/
     │   ├── Main.elm          # Browser.application entry point
-    │   ├── Types.elm         # Model, Pokemon, Route types
+    │   ├── Types.elm         # Model, domain types, Route type
     │   ├── Api.elm           # HTTP + JSON decoder
     │   ├── View.elm          # Main view + routing
     │   ├── Views/
     │   │   ├── Home.elm      # Home page
-    │   │   ├── Search.elm    # Search results
-    │   │   └── Detail.elm    # Pokemon detail + SVG chart
+    │   │   ├── Closet.elm    # Outfit builder
+    │   │   └── About.elm     # Project info
     │   ├── Svg/
-    │   │   └── Chart.elm     # Radar chart SVG
+    │   │   └── OutfitPreview.elm  # Outfit visualization SVG
     │   └── Styles.elm        # Bulma CSS helpers
     ├── public/
     │   └── index.html        # HTML shell for the app
@@ -173,7 +173,7 @@ Grundlagen_des_WWW/
 ## Step 6: Run the Dev Server
 
 ```bash
-cd pokedex-browser
+cd uni-project
 elm reactor
 # Open http://localhost:8000 in your browser
 # Click on src/Main.elm to preview
@@ -215,7 +215,7 @@ Successful compilation produces `main.js`. No output means success (Elm is silen
 
 ### "CORS errors in the browser"
 → Always test via `elm reactor` (localhost), never via `file://`
-→ PokéAPI supports CORS, so this should work out of the box
+→ The API/JSON endpoint supports CORS, so this should work out of the box
 
 ---
 
