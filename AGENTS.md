@@ -194,3 +194,21 @@ export GITHUB_TOKEN=$(cat ~/.github_token | grep -v ^#)
 **Solution**: Removed the token string from AGENTS.md. Token reference now uses `<TOKEN>` placeholder in docs. The actual token is stored only in `~/.github_token`.
 
 **Status**: ✅ Resolved — token removed from committed files
+
+---
+
+## GitLab Lehre API Access
+
+For querying pipelines, deployments, and pages on `gitlab-lehre.informatik.uni-halle.de`:
+
+```bash
+export GITLAB_TOKEN=$(cat ~/.config/gitlab-lehre-token 2>/dev/null)
+```
+
+If token is missing, it's stored at `~/.config/gitlab-lehre-token` with `chmod 600`.
+
+Example:
+```bash
+curl -s --header "PRIVATE-TOKEN: $GITLAB_TOKEN" \
+  "https://gitlab-lehre.informatik.uni-halle.de/api/v4/projects/aqrxx%2Fss26-sam-doaa-project/pipelines?per_page=5"
+```
