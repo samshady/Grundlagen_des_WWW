@@ -3,7 +3,7 @@ marp: true
 theme: unihalle
 paginate: true
 header: "Martin-Luther-Universität Halle-Wittenberg"
-footer: "Grundlagen des WWW | SS-26"
+footer: "Grundlagen des WWW | SS-26 | Al-Shoumi & Rana"
 ---
 
 <style>
@@ -52,6 +52,10 @@ code {
 .title-line { border-top: 3px solid #9FBF47; width: 80px; margin: 0.5em auto; }
 .title-team { font-size: 0.7em; }
 .title-meta { color: #928781; font-size: 0.55em; }
+
+.card-list { list-style: none; padding: 0 0 0 6px; margin: 4px 0 0 0; text-align: left; }
+.card-list li { padding: 2px 0; font-size: 0.9em; line-height: 1.35; }
+.card-list li::before { content: "▸ "; color: #295A97; font-weight: 700; }
 </style>
 
 <!-- _class: title -->
@@ -77,41 +81,55 @@ code {
 
 ---
 
-<!-- SLIDE 2: Problem -->
+<!-- SLIDE 2: Problem & Lösung -->
 
-## Das Problem
+## Problem & Lösung
 
 <div class="card-row">
+
+<div class="card card-alert">
+<img src="icons/mdi_alert-outline.svg" class="card-icon" />
+<h3>Problem</h3>
+<ul class="card-list">
+<li>Jeden Morgen die Frage: Was ziehe ich an?</li>
+<li>Unklar, was gut zusammen aussieht</li>
+<li>Kein Überblick über Kombinationen</li>
+<li>Zeitaufwändiges manuelles Zusammenstellen</li>
+</ul>
+</div>
 
 <div class="card card-green">
 <img src="icons/mdi_brain.svg" class="card-icon" />
 <h3>Idee</h3>
-Jeden Morgen die Frage: Was ziehe ich an? Ein digitaler Kleiderschrank, der Outfits bewertet und die Entscheidung erleichtert.
-</div>
-
-<div class="card">
-<img src="icons/mdi_tshirt-crew.svg" class="card-icon" />
-<h3>Herausforderung</h3>
-Kleidung ist über viele Kategorien verteilt · Kein Überblick über Kombinationen · Zeitaufwändiges manuelles Zusammenstellen
+Ein digitaler Kleiderschrank, der Outfits bewertet und die Entscheidung erleichtert.
 </div>
 
 </div>
+
+<div class="flow-arrow">↓</div>
+
+<p class="section-label">App auf einen Blick</p>
 
 <div class="btm-row">
 
 <div class="mini-card">
-<span class="num">50+</span>
-Kleidungsstücke mit echten Bildern
+<img src="icons/ph_t-shirt-fill.svg" class="mini-icon" />
+Alle Kleidungsstücke digital verwalten
 </div>
 
 <div class="mini-card">
-<span class="num">4</span>
-Bewertungsdimensionen auf einen Blick
+<span class="num">★</span>
+Multi-Select für beliebige Kombinationen
 </div>
 
 <div class="mini-card">
-<span class="num">✓</span>
-Live-Radar bei jeder Auswahl
+<span class="num">↻</span>
+Radar-Chart bewertet jedes Outfit
+</div>
+
+<div class="mini-card">
+<span class="num">⇄</span>
+Outfit-URLs zum Teilen speichern
 </div>
 
 </div>
@@ -125,6 +143,8 @@ section { display: block; }
   padding: 16px; font-size: 0.75em; line-height: 1.5; text-align: center;
 }
 .card-green { background: #EFF5E5; border-left-color: #9FBF47; }
+.card-alert { background: #FFF0EE; border-left-color: #CC4444; }
+.card-alert h3 { color: #CC4444; }
 .card h3 { font-size: 1em; font-weight: 700; color: #295A97; margin: 0 0 6px 0; }
 .card-icon { width: 36px; height: 36px; display: block; margin: 0 auto 6px auto; }
 .mini-card {
@@ -134,7 +154,9 @@ section { display: block; }
 }
 .mini-icon { width: 28px; height: 28px; display: block; margin: 4px auto 0 auto; }
 .num { display: block; font-size: 1.5em; font-weight: 700; color: #295A97; line-height: 1; margin-bottom: 2px; }
-.btm-row { display: flex; gap: 14px; width: 100%; margin-top: 14px; }
+.btm-row { display: flex; gap: 14px; width: 100%; margin-top: 10px; }
+.flow-arrow { text-align: center; font-size: 1.8em; color: #295A97; line-height: 1; margin: 8px 0 2px 0; }
+.section-label { text-align: center; font-size: 0.65em; color: #928781; font-weight: 600; margin: 0 0 4px 0; text-transform: uppercase; letter-spacing: 0.08em; }
 </style>
 
 ---
@@ -145,16 +167,23 @@ section { display: block; }
 
 <div class="card-row">
 
-<div class="card">
-<img src="icons/material-symbols_route.svg" class="card-icon" />
-<h3>Drei Seiten</h3>
-Home, Closet und About - alle über die Browser-URL erreichbar mit Vor-/Zurück-Navigation
-</div>
-
 <div class="card card-green">
 <img src="icons/material-symbols_code.svg" class="card-icon" />
 <h3>Daten aus JSON</h3>
-50+ Kleidungsstücke werden aus einer JSON-Datei geladen und typsicher in die App-Struktur übersetzt
+<ul class="card-list">
+<li>63 Kleidungsstücke aus JSON per HTTP</li>
+<li>Wechsel zwischen Main- und Sommer-Schrank</li>
+</ul>
+</div>
+
+<div class="card">
+<img src="icons/material-symbols_route.svg" class="card-icon" />
+<h3>Hash-basiertes Routing</h3>
+<ul class="card-list">
+<li>Home, Closet, About via #-Fragment</li>
+<li>Vor-/Zurück-Navigation</li>
+<li>Serverunabhängig</li>
+</ul>
 </div>
 
 </div>
@@ -162,22 +191,33 @@ Home, Closet und About - alle über die Browser-URL erreichbar mit Vor-/Zurück-
 <div class="card-row">
 
 <div class="card card-green">
-<img src="icons/mdi_draw.svg" class="card-icon" />
-<h3>Interaktives SVG</h3>
-Das Radar-Diagramm ist ein echtes SVG und zeichnet sich bei jeder Änderung der Auswahl automatisch neu
+<img src="icons/mdi_target.svg" class="card-icon" />
+<h3>Filter & Tags</h3>
+<ul class="card-list">
+<li>Dynamische Tag-Filter-Leiste</li>
+<li>Outfit-URLs zum Teilen (#/closet/id1+id2)</li>
+</ul>
 </div>
 
 <div class="card">
 <img src="icons/mdi_puzzle.svg" class="card-icon" />
-<h3>Drei Schichten</h3>
-Zustand (Model), Logik (Update) und Darstellung (View) sind strikt getrennt - wartbar und erweiterbar
+<h3>Elm-Architektur</h3>
+<ul class="card-list">
+<li>Model/Update/View strikt getrennt</li>
+<li>Interaktives SVG-Radar aus elm/svg</li>
+<li>Live-Neuberechnung bei jeder Auswahl</li>
+</ul>
 </div>
 
 </div>
 
 <div class="tech-bar">
 <span class="gear">⚙</span>
-Elm · Bulma CSS (responsiv) · GitLab Pages
+<span>Elm 0.19.1</span>
+<span>elm/svg</span>
+<span>HTTP/JSON</span>
+<span>GitLab Pages</span>
+<span>Hash-Routing</span>
 </div>
 
 <style scoped>
@@ -192,20 +232,80 @@ section { display: block; }
 .card h3 { font-size: 1em; font-weight: 700; color: #295A97; margin: 0 0 4px 0; }
 .card-icon { width: 36px; height: 36px; display: block; margin: 0 auto 6px auto; }
 .tech-bar {
-  display: flex; gap: 8px; margin-top: 14px; padding: 10px 14px;
-  background: #295A97; border-radius: 8px; color: white; font-size: 0.65em;
+  display: flex; justify-content: space-evenly; gap: 4px; margin-top: 14px; padding: 10px 14px;
+  background: #F5F5F2; border-radius: 8px; color: #444444; font-size: 0.65em;
   align-items: center;
 }
-.tech-bar .gear { font-size: 1.3em; }
+.tech-bar .gear { font-size: 1.3em; color: #295A97; }
 </style>
 
 ---
 
-<!-- SLIDE 4: Radar -->
+<!-- SLIDE 4: Daten-Features (Filter, Wardrobes, JSON) -->
+
+## Daten & Interaktion
+
+<div class="card-row">
+
+<div class="card card-green">
+<img src="icons/mdi_code-tags.svg" class="card-icon" />
+<h3>JSON & Tag-Filter</h3>
+<pre class="code-card">
+{ "id":"black-dress", "name":"Black Midi Dress",
+  "scoreStyle":85, "scoreComfort":40,
+  "scoreFormal":90, "scoreDurable":70,
+  "tags":["elegant","evening","black"] }
+
+filtered = List.filter (\item ->
+    List.any (\f ->
+        List.member f item.tags)
+        activeFilters) items
+</pre>
+</div>
+
+<div class="card">
+<img src="icons/mdi_wardrobe-outline.svg" class="card-icon" />
+<h3>Daten-Handling</h3>
+<ul class="card-list">
+<li><strong>Zwei JSON-Dateien</strong><br><code>/items.json</code> (63) · <code>/summer.json</code> (21)</li>
+<li><strong>HTTP-Ladung</strong><br>SwitchWardrobe lädt neue JSON + resetSelections</li>
+<li><strong>Typsicherer Decoder</strong><br>Decode.map7 wandelt JSON in WardrobeData</li>
+<li><strong>Dynamische Tags</strong><br>collectAllTags extrahiert Tags aus allen Items</li>
+</ul>
+</div>
+
+</div>
+
+<style scoped>
+section { display: block; }
+.card-row { display: flex; gap: 14px; width: 100%; margin-top: 12px; }
+.card {
+  flex: 1 1 0; min-width: 0;
+  background: #F5F5F2; border-left: 4px solid #295A97; border-radius: 6px;
+  padding: 14px; font-size: 0.7em; line-height: 1.4; text-align: center;
+}
+.card-green { background: #EFF5E5; border-left-color: #9FBF47; }
+.card h3 { font-size: 1em; font-weight: 700; color: #295A97; margin: 0 0 6px 0; }
+.card-icon { width: 32px; height: 32px; display: block; margin: 0 auto 6px auto; }
+.code-card {
+  background: #F5F5F2 !important; color: #282828 !important;
+  border: 1px solid #DADDD8 !important; border-left: 3px solid #295A97 !important;
+  border-radius: 5px !important; padding: 8px !important;
+  font-size: 0.6em !important; line-height: 1.3 !important;
+  text-align: left; margin: 4px 0 0 0;
+}
+.bullet-list { text-align: left; margin-top: 4px; }
+.bullet-list p { margin: 0 0 8px 0; font-size: 0.85em; line-height: 1.35; }
+.bullet-list code { font-size: 0.9em; }
+</style>
+
+---
+
+<!-- SLIDE 5: Radar -->
 
 ## So funktioniert das Radar-Diagramm
 
-Ein Radar-Diagramm zeigt auf einen Blick, wie gut ein Outfit in verschiedenen Kategorien abschneidet - je groser die Flache, desto ausgewogener das Outfit.
+Ein Radar-Diagramm zeigt auf einen Blick, wie gut ein Outfit in verschiedenen Kategorien abschneidet - je großer die Fläche, desto ausgewogener das Outfit.
 
 <div class="code-layout">
 
@@ -217,13 +317,17 @@ type alias Scores =
     , formal : Int, durable : Int }
 </pre>
 
-<h3>Berechnung des Mittelwerts</h3>
+<h3>Berechnung (Maximum pro Kategorie)</h3>
 <pre>
 combineScores items =
-    Scores (average .style items)
-           (average .comfort items)
-           (average .formal items)
-           (average .durable items)
+    Scores (maxOf .style items)
+           (maxOf .comfort items)
+           (maxOf .formal items)
+           (maxOf .durable items)
+
+maxOf accessor list =
+    List.maximum
+        (List.map accessor list)
 </pre>
 </div>
 
@@ -232,17 +336,19 @@ combineScores items =
 <pre>
 dataPolygon cx cy r axes =
     polygon [ points pts
-            , fill "#9FBF47"
-            , fillOpacity "0.35" ] []
+            , fill "#6b4c3b"
+            , fillOpacity "0.35"
+            , stroke "#6b4c3b"
+            , strokeWidth "2" ] []
 </pre>
 
-<h3>Live-Update</h3>
+<h3>Vier Achsen, 90°-Winkel</h3>
 <pre>
-Jede Änderung der Auswahl löst
-eine Neüberechnung aus:
-Item wählen -> Model ändert sich
--> View rendert neu -> Polygon
-aktualisiert sich automatisch
+axes =
+    [ ("Style",  deg 270, style)
+    , ("Comfort", deg 0,   comfort)
+    , ("Formal",  deg 90,  formal)
+    , ("Durable", deg 180, durable) ]
 </pre>
 </div>
 
@@ -263,22 +369,31 @@ p { font-size: 0.65em; line-height: 1.4; margin: 0 0 10px 0; }
 
 ---
 
-<!-- SLIDE 5: Ergebnis -->
+<!-- SLIDE 6: Ergebnis -->
 
 ## Ergebnis & Ausblick
 
 <div class="card-row">
 
-<div class="card card-green">
+<div class="card">
 <img src="icons/mdi_function.svg" class="card-icon" />
 <h3>Elm als Basis</h3>
-Typensicherheit verhindert Laufzeitfehler · Saübere Trennung von Zustand, Logik und Darstellung
+<ul class="card-list">
+<li>Typensicherheit verhindert Laufzeitfehler</li>
+<li>Saubere Trennung von Zustand, Logik und Darstellung</li>
+</ul>
 </div>
 
 <div class="card card-green">
 <img src="icons/mdi_checkbox-marked-circle.svg" class="card-icon" />
 <h3>Erreichte Ziele</h3>
-Voll funktionsfahiger Prototyp mit 3 Routen · HTTP-Ladung der JSON-Daten · Interaktives SVG-Radar in Echtzeit
+<ul class="card-list">
+<li>Voll funktionsfähiger Prototyp mit 3 Routen</li>
+<li>63 Items in 7 Kategorien</li>
+<li>Tag-Filter · Outfit-URLs zum Teilen</li>
+<li>Kleiderschrank-Wechsel (Main/Summer)</li>
+<li>Multi-Select Accessoires · SVG-Radar</li>
+</ul>
 </div>
 
 </div>
@@ -288,13 +403,22 @@ Voll funktionsfahiger Prototyp mit 3 Routen · HTTP-Ladung der JSON-Daten · Int
 <div class="card">
 <img src="icons/mdi_progress-check.svg" class="card-icon" />
 <h3>Optimierung</h3>
-CSS-Styling aufwändiger · Fruher mit Datenstruktur beginnen · Elm-Paketdokumentation gewöhnungsbedürftig
+<ul class="card-list">
+<li>CSS-Styling aufwändiger</li>
+<li>Früher mit Datenstruktur beginnen</li>
+<li>Elm-Paketdokumentation gewöhnungsbedürftig</li>
+</ul>
 </div>
 
 <div class="card card-green">
 <img src="icons/mdi_trending-up.svg" class="card-icon" />
 <h3>Ausblick</h3>
-Wetter-API fur Vorschläge · Outfits als JSON speichern · Filter nach Anlass (Uni, Party, Business)
+<ul class="card-list">
+<li>Wetter-API für Vorschläge</li>
+<li>Outfits als JSON exportieren</li>
+<li>Filter nach Anlass (Uni, Party, Business)</li>
+<li>Outfit-Bewertung speichern</li>
+</ul>
 </div>
 
 </div>
