@@ -326,8 +326,8 @@ combineScores items =
            (maxOf .durable items)
 
 maxOf accessor list =
-    List.maximum
-        (List.map accessor list)
+    List.maximum (List.map accessor list)
+        |> Maybe.withDefault 0
 </pre>
 </div>
 
